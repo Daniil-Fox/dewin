@@ -1,0 +1,116 @@
+// ваш код
+
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 11px 0;
+  background: var(--siniy);
+
+  &__logo {
+    display: block;
+    width: 217px;
+    height: 54px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: left;
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__btn {
+    min-width: 97px;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 176%;
+    text-align: center;
+    color: var(--belyy);
+    border: 1px solid var(--belyy);
+    border-radius: 20px;
+  }
+}
+
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  &__arrow {
+    font-size: 50%;
+  }
+}
+
+.globe-icon {
+  width: 22px;
+  height: 22px;
+  fill: var(--siniy);
+  border-radius: 100%;
+  background-color: var(--belyy);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.language-option {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-option:hover {
+  background-color: #f5f5f5;
+}
+
+.language-option.active {
+  background-color: #e6f0ff;
+  color: #0066cc;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}

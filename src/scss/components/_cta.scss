@@ -1,0 +1,40 @@
+.cta {
+  padding-top: 250px;
+  margin-bottom: -278px;
+  &__container {
+    display: flex;
+    gap: 70px;
+    max-width: 1310px;
+    margin: 0 auto;
+  }
+  &__img {
+    width: 3;
+  }
+  &__buttons {
+    display: flex;
+    gap: 28px;
+  }
+  &__title {
+    margin-bottom: 56px;
+    text-align: left;
+    text-align: justify;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 56px;
+      aspect-ratio: 1 / 1;
+      background-image: url("./../img/lupa.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__btn {
+    padding: 20px 50px;
+    font-size: 28px;
+    svg {
+      fill: currentColor;
+    }
+  }
+}

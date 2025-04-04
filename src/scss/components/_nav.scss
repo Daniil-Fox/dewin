@@ -1,0 +1,20 @@
+.nav {
+  & > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 46px;
+
+    & > li {
+      a {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 176%;
+        color: var(--belyy);
+      }
+    }
+  }
+}

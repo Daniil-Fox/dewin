@@ -1,0 +1,14 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Roboto", sans-serif;
+  --third-family: "SF Pro", sans-serif;
+  --content-width: 1488px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --siniy: #0039ff;
+  --belyy: #fff;
+  --chernyy: #1d1d1d;
+  --svetlo-siniy: #436dff;
+  --seryy: #989898;
+}

@@ -1,0 +1,133 @@
+.hero {
+  background-color: var(--siniy);
+  background-image: url("./../img/hero.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
+  background-size: auto 705px;
+  padding: 43px 0 60px;
+  &__header {
+    max-width: 1224px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 56px;
+    line-height: 1.2;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      transform: rotateZ(12deg) translateX(28px);
+
+      background-image: url("./../img/text-robot.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__desc {
+    max-width: 830px;
+    margin: 0 auto;
+    margin-bottom: 56px;
+  }
+  &__buttons {
+    margin-bottom: 73px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  &__subtitle {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    position: relative;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--belyy);
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: calc(100% + 45px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 80px;
+
+      background-image: url("./../img/stars.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(100% + 15px);
+      top: 50%;
+      width: 80px;
+      height: 80px;
+      transform: rotateZ(30deg) translateY(-50%);
+
+      background-image: url("./../img/confety.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__text {
+    max-width: 545px;
+    margin: 0 auto;
+    position: relative;
+    span {
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -57px;
+      bottom: -18px;
+      width: 80px;
+      height: 80px;
+
+      background-image: url("./../img/confety2.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -53px;
+      bottom: -18px;
+      width: 80px;
+      height: 80px;
+
+      background-image: url("./../img/stars.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
