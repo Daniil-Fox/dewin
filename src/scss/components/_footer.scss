@@ -14,6 +14,7 @@
     border-bottom: 2px solid #f1f2fa;
     display: flex;
     justify-content: space-between;
+    gap: 120px;
   }
   &__left {
     width: 100%;
@@ -21,9 +22,14 @@
   }
 
   &__right {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  &__col {
+    flex: 1;
+    max-width: 160px;
   }
   &__logo {
     display: block;
