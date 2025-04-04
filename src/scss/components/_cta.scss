@@ -31,10 +31,12 @@
   }
 
   &__btn {
-    padding: 20px 50px;
+    flex: 1;
+    padding: 20px;
     font-size: 28px;
     svg {
       fill: currentColor;
+      margin-left: 4px;
     }
   }
 }

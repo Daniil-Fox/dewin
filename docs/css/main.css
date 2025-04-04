@@ -279,7 +279,6 @@ a {
   border: 1px solid var(--belyy);
   border-radius: 24px;
   background-color: transparent;
-  border: 1px solid transparent;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
@@ -301,6 +300,7 @@ a {
 }
 .btn--blue {
   background-color: var(--svetlo-siniy);
+  border-color: transparent;
 }
 @media (any-hover: hover) {
   .btn--blue:hover {
@@ -308,7 +308,13 @@ a {
   }
 }
 .btn--dark {
+  border-color: transparent;
   background-color: var(--chernyy);
+}
+@media (any-hover: hover) {
+  .btn--dark:hover {
+    border-color: var(--svetlo-siniy);
+  }
 }
 
 .header {
@@ -984,11 +990,15 @@ a {
   background-position: center;
 }
 .cta__btn {
-  padding: 20px 50px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 20px;
   font-size: 28px;
 }
 .cta__btn svg {
   fill: currentColor;
+  margin-left: 4px;
 }
 
 .footer {
