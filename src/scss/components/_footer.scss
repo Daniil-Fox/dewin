@@ -40,7 +40,13 @@
       object-position: left;
     }
   }
-
+  &__copy {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #757575;
+  }
   &__bottom {
     small {
       font-family: var(--second-family);
