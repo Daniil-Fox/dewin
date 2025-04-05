@@ -21,7 +21,7 @@
         </ul>
       </nav>
       <div class="header__right">
-        <div class="header__dropdown language-dropdown">
+        <div class="header__dropdown dropdown-container language-dropdown">
           <button class="dropdown-button btn-reset">
             <svg
               class="globe-icon"
@@ -72,69 +72,67 @@
   @include('./menu.html')
 </header>
 <script>
-  const dropdownBtn = document.querySelector(".dropdown-button");
-  const languageDropdown = document.getElementById("languageDropdown");
-  const selectedLanguage = document.getElementById("selected-language");
-  const options = document.querySelectorAll(".language-option");
+  class Dropdown {
+    constructor(dropdownElement) {
+      this.dropdown = dropdownElement;
+      this.dropdownBtn = this.dropdown.querySelector(".dropdown-button");
+      this.languageDropdown = this.dropdown.querySelector(".dropdown-content");
+      this.selectedLanguage = this.dropdown.querySelector(".selected-language");
+      this.options = this.dropdown.querySelectorAll(".language-option");
 
-  dropdownBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleDropdown();
-  });
-
-  function toggleDropdown() {
-    languageDropdown.classList.toggle("show");
-  }
-
-  options.forEach((option) => {
-    option.addEventListener("click", (e) => {
-      const dataset = e.dataset.lang;
-      selectLanguage(dataset);
-    });
-  });
-  function selectLanguage(lang) {
-    selectedLanguage.textContent = lang;
-
-    for (let option of options) {
-      option.classList.remove("active");
-      if (option.textContent.trim() === lang) {
-        option.classList.add("active");
-      }
+      this.initializeDropdown();
     }
 
-    languageDropdown.classList.remove("show");
-  }
+    initializeDropdown() {
+      // Обработчик клика по кнопке
+      this.dropdownBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.toggleDropdown();
+      });
 
-  window.addEventListener("click", (event) => {
-    event.stopPropagation();
-    if (!event.target.matches(".dropdown-button")) {
-      const dropdowns = document.getElementsByClassName("dropdown-content");
-      for (let dropdown of dropdowns) {
-        if (dropdown.classList.contains("show")) {
-          dropdown.classList.remove("show");
+      // Обработчики для опций
+      this.options.forEach((option) => {
+        option.addEventListener("click", (e) => {
+          const lang = e.target.dataset.lang;
+          this.selectLanguage(lang);
+        });
+      });
+    }
+
+    toggleDropdown() {
+      this.languageDropdown.classList.toggle("show");
+    }
+
+    selectLanguage(lang) {
+      this.selectedLanguage.textContent = lang;
+
+      this.options.forEach((option) => {
+        option.classList.remove("active");
+        if (option.textContent.trim() === lang) {
+          option.classList.add("active");
         }
-      }
+      });
+
+      this.languageDropdown.classList.remove("show");
+    }
+  }
+
+  // Инициализация всех дропдаунов на странице
+  const dropdowns = document.querySelectorAll(".dropdown-container");
+  const dropdownInstances = Array.from(dropdowns).map(
+    (dropdown) => new Dropdown(dropdown)
+  );
+
+  // Глобальный обработчик для закрытия при клике вне дропдауна
+  window.addEventListener("click", (event) => {
+    if (!event.target.closest(".dropdown-container")) {
+      const openDropdowns = document.querySelectorAll(".dropdown-content.show");
+      openDropdowns.forEach((dropdown) => {
+        dropdown.classList.remove("show");
+      });
     }
   });
-  const enableScroll = () => {
-    const fixBlocks = document?.querySelectorAll(".fixed-block");
-    const body = document.body;
-    const pagePosition = parseInt(document.body.dataset.position, 10);
-    fixBlocks.forEach((el) => {
-      el.style.paddingRight = "0px";
-    });
-    document.body.style.paddingRight = "0px";
-
-    document.body.style.top = "auto";
-    document.body.classList.remove("dis-scroll");
-    window.scroll({
-      top: pagePosition,
-      left: 0,
-    });
-    document.body.removeAttribute("data-position");
-    document.documentElement.style.scrollBehavior = "smooth";
-  };
 
   const disableScroll = () => {
     const fixBlocks = document?.querySelectorAll(".fixed-block");
