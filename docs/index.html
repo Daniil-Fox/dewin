@@ -1,835 +1,735 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#111111" />
-    <title>MaxGraph New Site</title>
-    <link
-      rel="preload"
-      href="fonts/Inter-Light.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/Inter-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/Inter-Medium.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/Inter-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/Roboto-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/Roboto-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/SFProDisplay-Light.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/SFProDisplay-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/SFProDisplay-Semibold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="css/vendor.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <script defer src="js/main.js"></script>
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>MaxGraph New Site</title>
+  <link rel="preload" href="fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/SFProDisplay-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/SFProDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/SFProDisplay-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
 
   <body class="page__body">
     <div class="site-container">
       <header class="header">
-        <div class="container">
-          <div class="header__container">
-            <a href="#" class="header__logo">
-              <img src="./img/logo.webp" alt="" />
-            </a>
-            <nav class="header__nav nav">
-              <ul>
-                <li>
-                  <a href="#">О проекте</a>
-                </li>
-                <li>
-                  <a href="#">Новости</a>
-                </li>
-                <li>
-                  <a href="#">Магазин</a>
-                </li>
-                <li>
-                  <a href="#">Команды</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="header__right">
-              <div
-                class="header__dropdown dropdown-container language-dropdown"
-              >
-                <button class="dropdown-button btn-reset">
-                  <svg
-                    class="globe-icon"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M2.40002 16C2.40002 17.786 2.7518 19.5545 3.43526 21.2045C4.11873 22.8545 5.1205 24.3538 6.38337 25.6167C7.64625 26.8796 9.1455 27.8813 10.7955 28.5648C12.4456 29.2483 14.214 29.6 16 29.6C17.786 29.6 19.5545 29.2483 21.2045 28.5648C22.8545 27.8813 24.3538 26.8796 25.6167 25.6167C26.8796 24.3538 27.8813 22.8545 28.5648 21.2045C29.2483 19.5545 29.6 17.786 29.6 16C29.6 12.3931 28.1672 8.93387 25.6167 6.38337C23.0662 3.83288 19.607 2.40002 16 2.40002C12.3931 2.40002 8.93387 3.83288 6.38337 6.38337C3.83288 8.93387 2.40002 12.3931 2.40002 16ZM28 16C28 19.1826 26.7357 22.2349 24.4853 24.4853C22.2349 26.7357 19.1826 28 16 28C12.8174 28 9.76518 26.7357 7.51474 24.4853C5.26431 22.2349 4.00002 19.1826 4.00002 16C4.00002 12.8174 5.26431 9.76518 7.51474 7.51474C9.76518 5.26431 12.8174 4.00002 16 4.00002C19.1826 4.00002 22.2349 5.26431 24.4853 7.51474C26.7357 9.76518 28 12.8174 28 16Z"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M10.4 16C10.4 23.0336 12.7072 28.8 16 28.8C19.2928 28.8 21.6 23.0336 21.6 16C21.6 8.96641 19.2928 3.20001 16 3.20001C12.7072 3.20001 10.4 8.96641 10.4 16ZM20 16C20 22.2224 18.008 27.2 16 27.2C13.992 27.2 12 22.2224 12 16C12 9.77761 13.992 4.80001 16 4.80001C18.008 4.80001 20 9.77761 20 16Z"
-                    />
-                    <path
-                      d="M5.97607 8.49921L7.04807 7.31201C7.21874 7.46561 7.40167 7.61548 7.59687 7.76161C9.70567 9.34241 13.0337 10.3056 16.6609 10.3056C19.7537 10.3056 22.6401 9.60641 24.7489 8.40161C25.2347 8.12662 25.6938 7.80683 26.1201 7.44641L27.1601 8.66241C26.6822 9.07094 26.1435 9.44641 25.5441 9.78881C23.1809 11.1408 20.0209 11.9056 16.6609 11.9056C12.7089 11.9056 9.04167 10.8448 6.63687 9.04161C6.40863 8.87019 6.18814 8.69028 5.97607 8.49921ZM5.97607 23.52L7.04807 24.704C7.21874 24.5493 7.40167 24.4 7.59687 24.256C9.70567 22.6752 13.0337 21.712 16.6609 21.712C19.7537 21.712 22.6401 22.4096 24.7489 23.616C25.263 23.9115 25.7201 24.2293 26.1201 24.5696L27.1601 23.3536C26.6577 22.9286 26.1167 22.5515 25.5441 22.2272C23.1809 20.8768 20.0209 20.112 16.6609 20.112C12.7089 20.112 9.04167 21.1728 6.63687 22.9744C6.40221 23.1504 6.18194 23.3333 5.97607 23.52ZM3.20007 16.8V15.2H28.8001V16.8H3.20007Z"
-                    />
-                  </svg>
-                  <span id="selected-language">RU</span>
-                  <span class="dropdown-button__arrow">▼</span>
-                </button>
-                <div class="dropdown-content" id="languageDropdown">
-                  <div
-                    class="language-option active"
-                    onclick="selectLanguage('RU')"
-                  >
-                    RU
-                  </div>
-                  <div class="language-option" onclick="selectLanguage('EN')">
-                    EN
-                  </div>
-                </div>
-              </div>
-              <a href="#" class="header__btn btn-reset btn">Вход</a>
-            </div>
-
-            <button
-              class="btn-reset burger"
-              aria-label="Открыть меню"
-              aria-expanded="false"
-              data-burger
+  <div class="container">
+    <div class="header__container">
+      <a href="#" class="header__logo">
+        <img src="./img/logo.webp" alt="" />
+      </a>
+      <nav class="header__nav nav">
+        <ul>
+          <li>
+            <a href="#">О проекте</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+          <li>
+            <a href="#">Магазин</a>
+          </li>
+          <li>
+            <a href="#">Команды</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <div class="header__dropdown dropdown-container language-dropdown">
+          <button class="dropdown-button btn-reset">
+            <svg
+              class="globe-icon"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span class="burger__line"></span>
-            </button>
-          </div>
-        </div>
-
-        <div class="menu" data-menu>
-          <div class="menu__body">
-            <nav class="menu__nav nav">
-              <ul>
-                <li>
-                  <a href="#">О проекте</a>
-                </li>
-                <li>
-                  <a href="#">Новости</a>
-                </li>
-                <li>
-                  <a href="#">Магазин</a>
-                </li>
-                <li>
-                  <a href="#">Команды</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="menu__bottom">
-              <div
-                class="header__dropdown dropdown-container language-dropdown"
-              >
-                <button class="dropdown-button btn-reset">
-                  <svg
-                    class="globe-icon"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M2.40002 16C2.40002 17.786 2.7518 19.5545 3.43526 21.2045C4.11873 22.8545 5.1205 24.3538 6.38337 25.6167C7.64625 26.8796 9.1455 27.8813 10.7955 28.5648C12.4456 29.2483 14.214 29.6 16 29.6C17.786 29.6 19.5545 29.2483 21.2045 28.5648C22.8545 27.8813 24.3538 26.8796 25.6167 25.6167C26.8796 24.3538 27.8813 22.8545 28.5648 21.2045C29.2483 19.5545 29.6 17.786 29.6 16C29.6 12.3931 28.1672 8.93387 25.6167 6.38337C23.0662 3.83288 19.607 2.40002 16 2.40002C12.3931 2.40002 8.93387 3.83288 6.38337 6.38337C3.83288 8.93387 2.40002 12.3931 2.40002 16ZM28 16C28 19.1826 26.7357 22.2349 24.4853 24.4853C22.2349 26.7357 19.1826 28 16 28C12.8174 28 9.76518 26.7357 7.51474 24.4853C5.26431 22.2349 4.00002 19.1826 4.00002 16C4.00002 12.8174 5.26431 9.76518 7.51474 7.51474C9.76518 5.26431 12.8174 4.00002 16 4.00002C19.1826 4.00002 22.2349 5.26431 24.4853 7.51474C26.7357 9.76518 28 12.8174 28 16Z"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M10.4 16C10.4 23.0336 12.7072 28.8 16 28.8C19.2928 28.8 21.6 23.0336 21.6 16C21.6 8.96641 19.2928 3.20001 16 3.20001C12.7072 3.20001 10.4 8.96641 10.4 16ZM20 16C20 22.2224 18.008 27.2 16 27.2C13.992 27.2 12 22.2224 12 16C12 9.77761 13.992 4.80001 16 4.80001C18.008 4.80001 20 9.77761 20 16Z"
-                    />
-                    <path
-                      d="M5.97607 8.49921L7.04807 7.31201C7.21874 7.46561 7.40167 7.61548 7.59687 7.76161C9.70567 9.34241 13.0337 10.3056 16.6609 10.3056C19.7537 10.3056 22.6401 9.60641 24.7489 8.40161C25.2347 8.12662 25.6938 7.80683 26.1201 7.44641L27.1601 8.66241C26.6822 9.07094 26.1435 9.44641 25.5441 9.78881C23.1809 11.1408 20.0209 11.9056 16.6609 11.9056C12.7089 11.9056 9.04167 10.8448 6.63687 9.04161C6.40863 8.87019 6.18814 8.69028 5.97607 8.49921ZM5.97607 23.52L7.04807 24.704C7.21874 24.5493 7.40167 24.4 7.59687 24.256C9.70567 22.6752 13.0337 21.712 16.6609 21.712C19.7537 21.712 22.6401 22.4096 24.7489 23.616C25.263 23.9115 25.7201 24.2293 26.1201 24.5696L27.1601 23.3536C26.6577 22.9286 26.1167 22.5515 25.5441 22.2272C23.1809 20.8768 20.0209 20.112 16.6609 20.112C12.7089 20.112 9.04167 21.1728 6.63687 22.9744C6.40221 23.1504 6.18194 23.3333 5.97607 23.52ZM3.20007 16.8V15.2H28.8001V16.8H3.20007Z"
-                    />
-                  </svg>
-                  <span id="selected-language">RU</span>
-                  <span class="dropdown-button__arrow">▼</span>
-                </button>
-                <div class="dropdown-content" id="languageDropdown">
-                  <div
-                    class="language-option active"
-                    onclick="selectLanguage('RU')"
-                  >
-                    RU
-                  </div>
-                  <div class="language-option" onclick="selectLanguage('EN')">
-                    EN
-                  </div>
-                </div>
-              </div>
-              <a href="#" class="header__btn btn-reset btn">Вход</a>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.40002 16C2.40002 17.786 2.7518 19.5545 3.43526 21.2045C4.11873 22.8545 5.1205 24.3538 6.38337 25.6167C7.64625 26.8796 9.1455 27.8813 10.7955 28.5648C12.4456 29.2483 14.214 29.6 16 29.6C17.786 29.6 19.5545 29.2483 21.2045 28.5648C22.8545 27.8813 24.3538 26.8796 25.6167 25.6167C26.8796 24.3538 27.8813 22.8545 28.5648 21.2045C29.2483 19.5545 29.6 17.786 29.6 16C29.6 12.3931 28.1672 8.93387 25.6167 6.38337C23.0662 3.83288 19.607 2.40002 16 2.40002C12.3931 2.40002 8.93387 3.83288 6.38337 6.38337C3.83288 8.93387 2.40002 12.3931 2.40002 16ZM28 16C28 19.1826 26.7357 22.2349 24.4853 24.4853C22.2349 26.7357 19.1826 28 16 28C12.8174 28 9.76518 26.7357 7.51474 24.4853C5.26431 22.2349 4.00002 19.1826 4.00002 16C4.00002 12.8174 5.26431 9.76518 7.51474 7.51474C9.76518 5.26431 12.8174 4.00002 16 4.00002C19.1826 4.00002 22.2349 5.26431 24.4853 7.51474C26.7357 9.76518 28 12.8174 28 16Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4 16C10.4 23.0336 12.7072 28.8 16 28.8C19.2928 28.8 21.6 23.0336 21.6 16C21.6 8.96641 19.2928 3.20001 16 3.20001C12.7072 3.20001 10.4 8.96641 10.4 16ZM20 16C20 22.2224 18.008 27.2 16 27.2C13.992 27.2 12 22.2224 12 16C12 9.77761 13.992 4.80001 16 4.80001C18.008 4.80001 20 9.77761 20 16Z"
+              />
+              <path
+                d="M5.97607 8.49921L7.04807 7.31201C7.21874 7.46561 7.40167 7.61548 7.59687 7.76161C9.70567 9.34241 13.0337 10.3056 16.6609 10.3056C19.7537 10.3056 22.6401 9.60641 24.7489 8.40161C25.2347 8.12662 25.6938 7.80683 26.1201 7.44641L27.1601 8.66241C26.6822 9.07094 26.1435 9.44641 25.5441 9.78881C23.1809 11.1408 20.0209 11.9056 16.6609 11.9056C12.7089 11.9056 9.04167 10.8448 6.63687 9.04161C6.40863 8.87019 6.18814 8.69028 5.97607 8.49921ZM5.97607 23.52L7.04807 24.704C7.21874 24.5493 7.40167 24.4 7.59687 24.256C9.70567 22.6752 13.0337 21.712 16.6609 21.712C19.7537 21.712 22.6401 22.4096 24.7489 23.616C25.263 23.9115 25.7201 24.2293 26.1201 24.5696L27.1601 23.3536C26.6577 22.9286 26.1167 22.5515 25.5441 22.2272C23.1809 20.8768 20.0209 20.112 16.6609 20.112C12.7089 20.112 9.04167 21.1728 6.63687 22.9744C6.40221 23.1504 6.18194 23.3333 5.97607 23.52ZM3.20007 16.8V15.2H28.8001V16.8H3.20007Z"
+              />
+            </svg>
+            <span id="selected-language">RU</span>
+            <span class="dropdown-button__arrow">▼</span>
+          </button>
+          <div class="dropdown-content" id="languageDropdown">
+            <div class="language-option active" onclick="selectLanguage('RU')">
+              RU
             </div>
+            <div class="language-option" onclick="selectLanguage('EN')">EN</div>
           </div>
         </div>
-      </header>
-      <script>
-        class Dropdown {
-          constructor(dropdownElement) {
-            this.dropdown = dropdownElement;
-            this.dropdownBtn = this.dropdown.querySelector(".dropdown-button");
-            this.languageDropdown =
-              this.dropdown.querySelector(".dropdown-content");
-            this.selectedLanguage =
-              this.dropdown.querySelector(".selected-language");
-            this.options = this.dropdown.querySelectorAll(".language-option");
+        <a href="#" class="header__btn btn-reset btn">Вход</a>
+      </div>
 
-            this.initializeDropdown();
-          }
+      <button
+        class="btn-reset burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
 
-          initializeDropdown() {
-            // Обработчик клика по кнопке
-            this.dropdownBtn.addEventListener("click", (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              this.toggleDropdown();
-            });
+  <div class="menu" data-menu>
+  <div class="menu__body">
+    <nav class="menu__nav nav">
+      <ul>
+        <li>
+          <a href="#">О проекте</a>
+        </li>
+        <li>
+          <a href="#">Новости</a>
+        </li>
+        <li>
+          <a href="#">Магазин</a>
+        </li>
+        <li>
+          <a href="#">Команды</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu__bottom">
+      <div class="header__dropdown dropdown-container language-dropdown">
+        <button class="dropdown-button btn-reset">
+          <svg
+            class="globe-icon"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M2.40002 16C2.40002 17.786 2.7518 19.5545 3.43526 21.2045C4.11873 22.8545 5.1205 24.3538 6.38337 25.6167C7.64625 26.8796 9.1455 27.8813 10.7955 28.5648C12.4456 29.2483 14.214 29.6 16 29.6C17.786 29.6 19.5545 29.2483 21.2045 28.5648C22.8545 27.8813 24.3538 26.8796 25.6167 25.6167C26.8796 24.3538 27.8813 22.8545 28.5648 21.2045C29.2483 19.5545 29.6 17.786 29.6 16C29.6 12.3931 28.1672 8.93387 25.6167 6.38337C23.0662 3.83288 19.607 2.40002 16 2.40002C12.3931 2.40002 8.93387 3.83288 6.38337 6.38337C3.83288 8.93387 2.40002 12.3931 2.40002 16ZM28 16C28 19.1826 26.7357 22.2349 24.4853 24.4853C22.2349 26.7357 19.1826 28 16 28C12.8174 28 9.76518 26.7357 7.51474 24.4853C5.26431 22.2349 4.00002 19.1826 4.00002 16C4.00002 12.8174 5.26431 9.76518 7.51474 7.51474C9.76518 5.26431 12.8174 4.00002 16 4.00002C19.1826 4.00002 22.2349 5.26431 24.4853 7.51474C26.7357 9.76518 28 12.8174 28 16Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10.4 16C10.4 23.0336 12.7072 28.8 16 28.8C19.2928 28.8 21.6 23.0336 21.6 16C21.6 8.96641 19.2928 3.20001 16 3.20001C12.7072 3.20001 10.4 8.96641 10.4 16ZM20 16C20 22.2224 18.008 27.2 16 27.2C13.992 27.2 12 22.2224 12 16C12 9.77761 13.992 4.80001 16 4.80001C18.008 4.80001 20 9.77761 20 16Z"
+            />
+            <path
+              d="M5.97607 8.49921L7.04807 7.31201C7.21874 7.46561 7.40167 7.61548 7.59687 7.76161C9.70567 9.34241 13.0337 10.3056 16.6609 10.3056C19.7537 10.3056 22.6401 9.60641 24.7489 8.40161C25.2347 8.12662 25.6938 7.80683 26.1201 7.44641L27.1601 8.66241C26.6822 9.07094 26.1435 9.44641 25.5441 9.78881C23.1809 11.1408 20.0209 11.9056 16.6609 11.9056C12.7089 11.9056 9.04167 10.8448 6.63687 9.04161C6.40863 8.87019 6.18814 8.69028 5.97607 8.49921ZM5.97607 23.52L7.04807 24.704C7.21874 24.5493 7.40167 24.4 7.59687 24.256C9.70567 22.6752 13.0337 21.712 16.6609 21.712C19.7537 21.712 22.6401 22.4096 24.7489 23.616C25.263 23.9115 25.7201 24.2293 26.1201 24.5696L27.1601 23.3536C26.6577 22.9286 26.1167 22.5515 25.5441 22.2272C23.1809 20.8768 20.0209 20.112 16.6609 20.112C12.7089 20.112 9.04167 21.1728 6.63687 22.9744C6.40221 23.1504 6.18194 23.3333 5.97607 23.52ZM3.20007 16.8V15.2H28.8001V16.8H3.20007Z"
+            />
+          </svg>
+          <span id="selected-language">RU</span>
+          <span class="dropdown-button__arrow">▼</span>
+        </button>
+        <div class="dropdown-content" id="languageDropdown">
+          <div class="language-option active" onclick="selectLanguage('RU')">
+            RU
+          </div>
+          <div class="language-option" onclick="selectLanguage('EN')">EN</div>
+        </div>
+      </div>
+      <a href="#" class="header__btn btn-reset btn">Вход</a>
+    </div>
+  </div>
+</div>
 
-            // Обработчики для опций
-            this.options.forEach((option) => {
-              option.addEventListener("click", (e) => {
-                const lang = e.target.dataset.lang;
-                this.selectLanguage(lang);
-              });
-            });
-          }
+</header>
+<script>
+  class Dropdown {
+    constructor(dropdownElement) {
+      this.dropdown = dropdownElement;
+      this.dropdownBtn = this.dropdown.querySelector(".dropdown-button");
+      this.languageDropdown = this.dropdown.querySelector(".dropdown-content");
+      this.selectedLanguage = this.dropdown.querySelector(".selected-language");
+      this.options = this.dropdown.querySelectorAll(".language-option");
 
-          toggleDropdown() {
-            this.languageDropdown.classList.toggle("show");
-          }
+      this.initializeDropdown();
+    }
 
-          selectLanguage(lang) {
-            this.selectedLanguage.textContent = lang;
+    initializeDropdown() {
+      // Обработчик клика по кнопке
+      this.dropdownBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.toggleDropdown();
+      });
 
-            this.options.forEach((option) => {
-              option.classList.remove("active");
-              if (option.textContent.trim() === lang) {
-                option.classList.add("active");
-              }
-            });
-
-            this.languageDropdown.classList.remove("show");
-          }
-        }
-
-        // Инициализация всех дропдаунов на странице
-        const dropdowns = document.querySelectorAll(".dropdown-container");
-        const dropdownInstances = Array.from(dropdowns).map(
-          (dropdown) => new Dropdown(dropdown)
-        );
-
-        // Глобальный обработчик для закрытия при клике вне дропдауна
-        window.addEventListener("click", (event) => {
-          if (!event.target.closest(".dropdown-container")) {
-            const openDropdowns = document.querySelectorAll(
-              ".dropdown-content.show"
-            );
-            openDropdowns.forEach((dropdown) => {
-              dropdown.classList.remove("show");
-            });
-          }
+      // Обработчики для опций
+      this.options.forEach((option) => {
+        option.addEventListener("click", (e) => {
+          const lang = e.target.dataset.lang;
+          this.selectLanguage(lang);
         });
-        const enableScroll = () => {
-          const fixBlocks = document?.querySelectorAll(".fixed-block");
-          const body = document.body;
-          const pagePosition = parseInt(document.body.dataset.position, 10);
-          fixBlocks.forEach((el) => {
-            el.style.paddingRight = "0px";
-          });
-          document.body.style.paddingRight = "0px";
+      });
+    }
 
-          document.body.style.top = "auto";
-          document.body.classList.remove("dis-scroll");
-          window.scroll({
-            top: pagePosition,
-            left: 0,
-          });
-          document.body.removeAttribute("data-position");
-          document.documentElement.style.scrollBehavior = "smooth";
-        };
+    toggleDropdown() {
+      this.languageDropdown.classList.toggle("show");
+    }
 
-        const disableScroll = () => {
-          const fixBlocks = document?.querySelectorAll(".fixed-block");
-          const pagePosition = window.scrollY;
-          const paddingOffset = `${
-            window.innerWidth - document.body.offsetWidth
-          }px`;
+    selectLanguage(lang) {
+      this.selectedLanguage.textContent = lang;
 
-          document.documentElement.style.scrollBehavior = "none";
-          fixBlocks.forEach((el) => {
-            el.style.paddingRight = paddingOffset;
-          });
-          document.body.style.paddingRight = paddingOffset;
-          document.body.classList.add("dis-scroll");
-          document.body.dataset.position = pagePosition;
-          document.body.style.top = `-${pagePosition}px`;
-        };
+      this.options.forEach((option) => {
+        option.classList.remove("active");
+        if (option.textContent.trim() === lang) {
+          option.classList.add("active");
+        }
+      });
 
-        (function () {
-          const burger = document?.querySelector("[data-burger]");
-          const menu = document?.querySelector("[data-menu]");
-          const menuItems = document?.querySelectorAll("[data-menu-item]");
-          const overlay = document?.querySelector("[data-menu-overlay]");
+      this.languageDropdown.classList.remove("show");
+    }
+  }
 
-          burger?.addEventListener("click", (e) => {
-            burger?.classList.toggle("burger--active");
-            menu?.classList.toggle("menu--active");
+  // Инициализация всех дропдаунов на странице
+  const dropdowns = document.querySelectorAll(".dropdown-container");
+  const dropdownInstances = Array.from(dropdowns).map(
+    (dropdown) => new Dropdown(dropdown)
+  );
 
-            if (menu?.classList.contains("menu--active")) {
-              burger?.setAttribute("aria-expanded", "true");
-              burger?.setAttribute("aria-label", "Закрыть меню");
-              disableScroll();
-            } else {
-              burger?.setAttribute("aria-expanded", "false");
-              burger?.setAttribute("aria-label", "Открыть меню");
-              enableScroll();
-            }
-          });
+  // Глобальный обработчик для закрытия при клике вне дропдауна
+  window.addEventListener("click", (event) => {
+    if (!event.target.closest(".dropdown-container")) {
+      const openDropdowns = document.querySelectorAll(".dropdown-content.show");
+      openDropdowns.forEach((dropdown) => {
+        dropdown.classList.remove("show");
+      });
+    }
+  });
+  const enableScroll = () => {
+    const fixBlocks = document?.querySelectorAll(".fixed-block");
+    const body = document.body;
+    const pagePosition = parseInt(document.body.dataset.position, 10);
+    fixBlocks.forEach((el) => {
+      el.style.paddingRight = "0px";
+    });
+    document.body.style.paddingRight = "0px";
 
-          overlay?.addEventListener("click", () => {
-            burger?.setAttribute("aria-expanded", "false");
-            burger?.setAttribute("aria-label", "Открыть меню");
-            burger.classList.remove("burger--active");
-            menu.classList.remove("menu--active");
-            enableScroll();
-          });
+    document.body.style.top = "auto";
+    document.body.classList.remove("dis-scroll");
+    window.scroll({
+      top: pagePosition,
+      left: 0,
+    });
+    document.body.removeAttribute("data-position");
+    document.documentElement.style.scrollBehavior = "smooth";
+  };
 
-          menuItems?.forEach((el) => {
-            el.addEventListener("click", () => {
-              burger?.setAttribute("aria-expanded", "false");
-              burger?.setAttribute("aria-label", "Открыть меню");
-              burger.classList.remove("burger--active");
-              menu.classList.remove("menu--active");
-              enableScroll();
-            });
-          });
-        })();
-      </script>
+  const disableScroll = () => {
+    const fixBlocks = document?.querySelectorAll(".fixed-block");
+    const pagePosition = window.scrollY;
+    const paddingOffset = `${window.innerWidth - document.body.offsetWidth}px`;
+
+    document.documentElement.style.scrollBehavior = "none";
+    fixBlocks.forEach((el) => {
+      el.style.paddingRight = paddingOffset;
+    });
+    document.body.style.paddingRight = paddingOffset;
+    document.body.classList.add("dis-scroll");
+    document.body.dataset.position = pagePosition;
+    document.body.style.top = `-${pagePosition}px`;
+  };
+
+  (function () {
+    const burger = document?.querySelector("[data-burger]");
+    const menu = document?.querySelector("[data-menu]");
+    const menuItems = document?.querySelectorAll("[data-menu-item]");
+    const overlay = document?.querySelector("[data-menu-overlay]");
+
+    burger?.addEventListener("click", (e) => {
+      burger?.classList.toggle("burger--active");
+      menu?.classList.toggle("menu--active");
+
+      if (menu?.classList.contains("menu--active")) {
+        burger?.setAttribute("aria-expanded", "true");
+        burger?.setAttribute("aria-label", "Закрыть меню");
+        disableScroll();
+      } else {
+        burger?.setAttribute("aria-expanded", "false");
+        burger?.setAttribute("aria-label", "Открыть меню");
+        enableScroll();
+      }
+    });
+
+    overlay?.addEventListener("click", () => {
+      burger?.setAttribute("aria-expanded", "false");
+      burger?.setAttribute("aria-label", "Открыть меню");
+      burger.classList.remove("burger--active");
+      menu.classList.remove("menu--active");
+      enableScroll();
+    });
+
+    menuItems?.forEach((el) => {
+      el.addEventListener("click", () => {
+        burger?.setAttribute("aria-expanded", "false");
+        burger?.setAttribute("aria-label", "Открыть меню");
+        burger.classList.remove("burger--active");
+        menu.classList.remove("menu--active");
+        enableScroll();
+      });
+    });
+  })();
+</script>
 
       <main class="main">
         <section class="hero">
-          <div class="container">
-            <div class="hero__header">
-              <h1 class="hero__title title1">
-                Dewin » Telegram конференц-бот для ваших групп!
-              </h1>
-              <p class="desc hero__desc">
-                Именно он&nbsp;прямо сейчас помогает многим людям сделать
-                процесс управлением конференциями еще более быстрым, удобным
-                и&nbsp;эффективным!
-              </p>
-            </div>
-            <div class="hero__buttons">
-              <a href="#" class="btn btn-reset btn--white"
-                >/пригласить в группу</a
-              >
-              <a href="#" class="btn btn-reset">/о&nbsp;проекте</a>
-            </div>
-            <div class="hero__content">
-              <div class="hero__img">
-                <img src="./img/iphone.webp" alt="" />
-              </div>
-              <div class="hero__bottom centered">
-                <p class="hero__subtitle">Dewin » используют</p>
-                <p class="title2 hero__text">
-                  <span>777 пользователя</span>
-                  <span>в 77 группах</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="benefits">
-          <div class="container">
-            <div class="benefits__header">
-              <h2 class="title2 title2--dark benefits__title">Преимущества</h2>
-              <p class="text benefits__subtitle">
-                Какие у&nbsp;него плюсы и что он умеет?
-              </p>
-            </div>
+  <div class="container">
+    <div class="hero__header">
+      <h1 class="hero__title title1">
+        Dewin » Telegram конференц-бот для ваших групп!
+      </h1>
+      <p class="desc hero__desc">
+        Именно он&nbsp;прямо сейчас помогает многим людям сделать процесс
+        управлением конференциями еще более быстрым, удобным и&nbsp;эффективным!
+      </p>
+    </div>
+    <div class="hero__buttons">
+      <a href="#" class="btn btn-reset btn--white">/пригласить в группу</a>
+      <a href="#" class="btn btn-reset">/о&nbsp;проекте</a>
+    </div>
+    <div class="hero__content">
+      <div class="hero__img">
+        <img src="./img/iphone.webp" alt="" />
+      </div>
+      <div class="hero__bottom centered">
+        <p class="hero__subtitle">Dewin » используют</p>
+        <p class="title2 hero__text">
+          <span>777 пользователя</span>
+          <span>в 77 группах</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="benefits">
+  <div class="container">
+    <div class="benefits__header">
+      <h2 class="title2 title2--dark benefits__title">Преимущества</h2>
+      <p class="text benefits__subtitle">
+        Какие у&nbsp;него плюсы и что он умеет?
+      </p>
+    </div>
 
-            <div class="benefits__content">
-              <div class="benefits__robot robot">
-                <div class="robot__img">
-                  <img src="./img/robot.webp" alt="" />
-                </div>
-              </div>
-              <ul class="list-reset benefits__items">
-                <li class="benefits__item ben">
-                  <div class="ben__capture capture">
-                    Удобный в использовании
-                  </div>
-                  <p class="desc desc--dark ben__desc">
-                    Бот способен распознавать команды на русском и английском
-                    языке и даже если вы ввели их в неправильной раскладке
-                    клавиатуры.
-                  </p>
-                </li>
-                <li class="benefits__item ben">
-                  <div class="ben__capture capture">Модерация группы</div>
-                  <p class="desc desc--dark ben__desc">
-                    У&nbsp;бота есть всё, чтобы комфортно следить за порядком в
-                    группе.
-                  </p>
-                </li>
-                <li class="benefits__item ben">
-                  <div class="ben__capture capture">
-                    Полный доступ к функционалу
-                  </div>
-                  <p class="desc desc--dark ben__desc">
-                    Для того чтобы полностью пользоваться ботом, вам не нужно
-                    покупать подписок или платного доступа.
-                  </p>
-                </li>
-                <li class="benefits__item ben">
-                  <div class="ben__capture capture">Быстрая работа бота</div>
-                  <p class="desc desc--dark ben__desc">
-                    За&nbsp;счет хорошего хостинга и постоянного улучшения бота,
-                    он имеет быстрый отклик на команды!
-                  </p>
-                </li>
-              </ul>
-              <a href="#" class="btn btn--blue benefits__btn">
-                /открыть информацию о&nbsp;боте
-              </a>
-            </div>
-          </div>
-        </section>
+    <div class="benefits__content">
+      <div class="benefits__robot robot">
+        <div class="robot__img">
+          <img src="./img/robot.webp" alt="" />
+        </div>
+      </div>
+      <ul class="list-reset benefits__items">
+        <li class="benefits__item ben">
+          <div class="ben__capture capture">Удобный в использовании</div>
+          <p class="desc desc--dark ben__desc">
+            Бот способен распознавать команды на русском и английском языке и
+            даже если вы ввели их в неправильной раскладке клавиатуры.
+          </p>
+        </li>
+        <li class="benefits__item ben">
+          <div class="ben__capture capture">Модерация группы</div>
+          <p class="desc desc--dark ben__desc">
+            У&nbsp;бота есть всё, чтобы комфортно следить за порядком в группе.
+          </p>
+        </li>
+        <li class="benefits__item ben">
+          <div class="ben__capture capture">Полный доступ к функционалу</div>
+          <p class="desc desc--dark ben__desc">
+            Для того чтобы полностью пользоваться ботом, вам не нужно покупать
+            подписок или платного доступа.
+          </p>
+        </li>
+        <li class="benefits__item ben">
+          <div class="ben__capture capture">Быстрая работа бота</div>
+          <p class="desc desc--dark ben__desc">
+            За&nbsp;счет хорошего хостинга и постоянного улучшения бота, он
+            имеет быстрый отклик на команды!
+          </p>
+        </li>
+      </ul>
+      <a href="#" class="btn btn--blue benefits__btn">
+        /открыть информацию о&nbsp;боте
+      </a>
+    </div>
+  </div>
+</section>
 
         <section class="poss">
-          <div class="container">
-            <div class="poss__header centered">
-              <h2 class="title2 poss__title">Возможности</h2>
-              <p class="text poss__subtitle">
-                Познакомьтесь с&nbsp;командами бота, которые помогут вам
-                эффективно управлять вашими конференциями и общаться
-                с&nbsp;участниками!
-              </p>
-            </div>
-            <div class="poss__items">
-              <div class="poss__row">
-                <p class="capture1 poss__capture">Команды общего доступа</p>
-                <ul class="list-reset poss__list">
-                  <li class="list-item poss__item">
-                    <a href="#"> admins </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> info </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> get </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> top </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> help </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> quit </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="poss__row">
-                <p class="capture1 poss__capture">Развлекательные команды</p>
-                <ul class="list-reset poss__list">
-                  <li class="list-item poss__item">
-                    <a href="#"> ehelp </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> hug </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> love </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> hit </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> kiss </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> slap </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> dance </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> highfive </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> boop </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> headpat </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> compliment </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> wave </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> wishluck </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> handshake </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> good_morning </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> good_night </a>
-                  </li>
-                </ul>
-              </div>
+  <div class="container">
+    <div class="poss__header centered">
+      <h2 class="title2 poss__title">Возможности</h2>
+      <p class="text poss__subtitle">
+        Познакомьтесь с&nbsp;командами бота, которые помогут вам эффективно
+        управлять вашими конференциями и общаться с&nbsp;участниками!
+      </p>
+    </div>
+    <div class="poss__items">
+      <div class="poss__row">
+        <p class="capture1 poss__capture">Команды общего доступа</p>
+        <ul class="list-reset poss__list">
+          <li class="list-item poss__item">
+            <a href="#"> admins </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> info </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> get </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> top </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> help </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> quit </a>
+          </li>
+        </ul>
+      </div>
+      <div class="poss__row">
+        <p class="capture1 poss__capture">Развлекательные команды</p>
+        <ul class="list-reset poss__list">
+          <li class="list-item poss__item">
+            <a href="#"> ehelp </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> hug </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> love </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> hit </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> kiss </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> slap </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> dance </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> highfive </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> boop </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> headpat </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> compliment </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> wave </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> wishluck </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> handshake </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> good_morning </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> good_night </a>
+          </li>
+        </ul>
+      </div>
 
-              <div class="poss__row">
-                <p class="capture1 poss__capture">Команды модерации</p>
-                <ul class="list-reset poss__list">
-                  <li class="list-item poss__item">
-                    <a href="#"> ahelp </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> setadmin </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> delladmin </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> all </a>
-                  </li>
-                  <li class="list-item poss__item">
-                    <a href="#"> sms </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="opt">
-          <div class="container">
-            <div class="opt__header">
-              <h2 class="title2 title2--dark opt__title">
-                Настройте бота под себя
-              </h2>
-              <p class="text opt__subtitle">
-                Здесь вы найдете полный набор инструментов для управления ботом
-                и настройки его работы.
-              </p>
-            </div>
+      <div class="poss__row">
+        <p class="capture1 poss__capture">Команды модерации</p>
+        <ul class="list-reset poss__list">
+          <li class="list-item poss__item">
+            <a href="#"> ahelp </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> setadmin </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> delladmin </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> all </a>
+          </li>
+          <li class="list-item poss__item">
+            <a href="#"> sms </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="opt">
+  <div class="container">
+    <div class="opt__header">
+      <h2 class="title2 title2--dark opt__title">Настройте бота под себя</h2>
+      <p class="text opt__subtitle">
+        Здесь вы найдете полный набор инструментов для управления ботом и
+        настройки его работы.
+      </p>
+    </div>
 
-            <div class="opt__content">
-              <div class="opt__left">
-                <div class="opt__img">
-                  <img src="./img/robot.webp" alt="" />
-                </div>
-                <p class="desc desc--blue opt__desc centered">
-                  В&nbsp;личном кабинете вы можете просматривать статистику,
-                  а&nbsp;также гибко управлять функциями бота в группе, включая
-                  и отключая их по своему усмотрению.
-                </p>
-              </div>
-              <div class="opt__right">
-                <a href="#" class="btn btn-reset btn--white opt__btn">
-                  /войти с&nbsp;помощью telegram
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14 0.666504C6.63996 0.666504 0.666626 6.63984 0.666626 13.9998C0.666626 21.3598 6.63996 27.3332 14 27.3332C21.36 27.3332 27.3333 21.3598 27.3333 13.9998C27.3333 6.63984 21.36 0.666504 14 0.666504ZM20.1866 9.73317C19.9866 11.8398 19.12 16.9598 18.68 19.3198C18.4933 20.3198 18.12 20.6532 17.7733 20.6932C17 20.7598 16.4133 20.1865 15.6666 19.6932C14.4933 18.9198 13.8266 18.4398 12.6933 17.6932C11.3733 16.8265 12.2266 16.3465 12.9866 15.5732C13.1866 15.3732 16.6 12.2665 16.6666 11.9865C16.6759 11.9441 16.6747 11.9001 16.663 11.8582C16.6514 11.8164 16.6298 11.7781 16.6 11.7465C16.52 11.6798 16.4133 11.7065 16.32 11.7198C16.2 11.7465 14.3333 12.9865 10.6933 15.4398C10.16 15.7998 9.67996 15.9865 9.25329 15.9732C8.77329 15.9598 7.86663 15.7065 7.18663 15.4798C6.34663 15.2132 5.69329 15.0665 5.74663 14.5998C5.77329 14.3598 6.10663 14.1198 6.73329 13.8665C10.6266 12.1732 13.2133 11.0532 14.5066 10.5198C18.2133 8.97317 18.9733 8.7065 19.48 8.7065C19.5866 8.7065 19.84 8.73317 20 8.8665C20.1333 8.97317 20.1733 9.11984 20.1866 9.2265C20.1733 9.3065 20.2 9.5465 20.1866 9.73317Z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+    <div class="opt__content">
+      <div class="opt__left">
+        <div class="opt__img">
+          <img src="./img/robot.webp" alt="" />
+        </div>
+        <p class="desc desc--blue opt__desc centered">
+          В&nbsp;личном кабинете вы можете просматривать статистику,
+          а&nbsp;также гибко управлять функциями бота в группе, включая и
+          отключая их по своему усмотрению.
+        </p>
+      </div>
+      <div class="opt__right">
+        <a href="#" class="btn btn-reset btn--white opt__btn">
+          /войти с&nbsp;помощью telegram
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 0.666504C6.63996 0.666504 0.666626 6.63984 0.666626 13.9998C0.666626 21.3598 6.63996 27.3332 14 27.3332C21.36 27.3332 27.3333 21.3598 27.3333 13.9998C27.3333 6.63984 21.36 0.666504 14 0.666504ZM20.1866 9.73317C19.9866 11.8398 19.12 16.9598 18.68 19.3198C18.4933 20.3198 18.12 20.6532 17.7733 20.6932C17 20.7598 16.4133 20.1865 15.6666 19.6932C14.4933 18.9198 13.8266 18.4398 12.6933 17.6932C11.3733 16.8265 12.2266 16.3465 12.9866 15.5732C13.1866 15.3732 16.6 12.2665 16.6666 11.9865C16.6759 11.9441 16.6747 11.9001 16.663 11.8582C16.6514 11.8164 16.6298 11.7781 16.6 11.7465C16.52 11.6798 16.4133 11.7065 16.32 11.7198C16.2 11.7465 14.3333 12.9865 10.6933 15.4398C10.16 15.7998 9.67996 15.9865 9.25329 15.9732C8.77329 15.9598 7.86663 15.7065 7.18663 15.4798C6.34663 15.2132 5.69329 15.0665 5.74663 14.5998C5.77329 14.3598 6.10663 14.1198 6.73329 13.8665C10.6266 12.1732 13.2133 11.0532 14.5066 10.5198C18.2133 8.97317 18.9733 8.7065 19.48 8.7065C19.5866 8.7065 19.84 8.73317 20 8.8665C20.1333 8.97317 20.1733 9.11984 20.1866 9.2265C20.1733 9.3065 20.2 9.5465 20.1866 9.73317Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section class="cta">
-          <div class="container">
-            <div class="cta__container">
-              <div class="cta__img">
-                <img src="./img/iphone2.webp" alt="" />
+  <div class="container">
+    <div class="cta__container">
+      <div class="cta__img">
+        <img src="./img/iphone2.webp" alt="" />
 
-                <div class="cta__buttons cta__buttons--mob">
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="btn btn-reset btn--dark cta__btn"
-                  >
-                    /перейти в telegram
+        <div class="cta__buttons cta__buttons--mob">
+          <a href="#" target="_blank" class="btn btn-reset btn--dark cta__btn">
+            /перейти в telegram
 
-                    <svg
-                      width="33"
-                      height="33"
-                      viewBox="0 0 33 33"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.75 3.1665C9.39002 3.1665 3.41669 9.13984 3.41669 16.4998C3.41669 23.8598 9.39002 29.8332 16.75 29.8332C24.11 29.8332 30.0834 23.8598 30.0834 16.4998C30.0834 9.13984 24.11 3.1665 16.75 3.1665ZM22.9367 12.2332C22.7367 14.3398 21.87 19.4598 21.43 21.8198C21.2434 22.8198 20.87 23.1532 20.5234 23.1932C19.75 23.2598 19.1634 22.6865 18.4167 22.1932C17.2434 21.4198 16.5767 20.9398 15.4434 20.1932C14.1234 19.3265 14.9767 18.8465 15.7367 18.0732C15.9367 17.8732 19.35 14.7665 19.4167 14.4865C19.4259 14.4441 19.4247 14.4001 19.4131 14.3582C19.4015 14.3164 19.3798 14.2781 19.35 14.2465C19.27 14.1798 19.1634 14.2065 19.07 14.2198C18.95 14.2465 17.0834 15.4865 13.4434 17.9398C12.91 18.2998 12.43 18.4865 12.0034 18.4732C11.5234 18.4598 10.6167 18.2065 9.93669 17.9798C9.09669 17.7132 8.44335 17.5665 8.49669 17.0998C8.52335 16.8598 8.85669 16.6198 9.48335 16.3665C13.3767 14.6732 15.9634 13.5532 17.2567 13.0198C20.9634 11.4732 21.7234 11.2065 22.23 11.2065C22.3367 11.2065 22.59 11.2332 22.75 11.3665C22.8834 11.4732 22.9234 11.6198 22.9367 11.7265C22.9234 11.8065 22.95 12.0465 22.9367 12.2332Z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="btn btn-reset btn--dark cta__btn"
-                  >
-                    /перейти в вконтакте
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.75 3.1665C9.39002 3.1665 3.41669 9.13984 3.41669 16.4998C3.41669 23.8598 9.39002 29.8332 16.75 29.8332C24.11 29.8332 30.0834 23.8598 30.0834 16.4998C30.0834 9.13984 24.11 3.1665 16.75 3.1665ZM22.9367 12.2332C22.7367 14.3398 21.87 19.4598 21.43 21.8198C21.2434 22.8198 20.87 23.1532 20.5234 23.1932C19.75 23.2598 19.1634 22.6865 18.4167 22.1932C17.2434 21.4198 16.5767 20.9398 15.4434 20.1932C14.1234 19.3265 14.9767 18.8465 15.7367 18.0732C15.9367 17.8732 19.35 14.7665 19.4167 14.4865C19.4259 14.4441 19.4247 14.4001 19.4131 14.3582C19.4015 14.3164 19.3798 14.2781 19.35 14.2465C19.27 14.1798 19.1634 14.2065 19.07 14.2198C18.95 14.2465 17.0834 15.4865 13.4434 17.9398C12.91 18.2998 12.43 18.4865 12.0034 18.4732C11.5234 18.4598 10.6167 18.2065 9.93669 17.9798C9.09669 17.7132 8.44335 17.5665 8.49669 17.0998C8.52335 16.8598 8.85669 16.6198 9.48335 16.3665C13.3767 14.6732 15.9634 13.5532 17.2567 13.0198C20.9634 11.4732 21.7234 11.2065 22.23 11.2065C22.3367 11.2065 22.59 11.2332 22.75 11.3665C22.8834 11.4732 22.9234 11.6198 22.9367 11.7265C22.9234 11.8065 22.95 12.0465 22.9367 12.2332Z"
+              />
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="btn btn-reset btn--dark cta__btn">
+            /перейти в вконтакте
 
-                    <svg
-                      width="33"
-                      height="33"
-                      viewBox="0 0 33 33"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.93 6.18C4.25 7.876 4.25 10.588 4.25 16.02V16.98C4.25 22.404 4.25 25.116 5.93 26.82C7.626 28.5 10.338 28.5 15.77 28.5H16.73C22.154 28.5 24.866 28.5 26.57 26.82C28.25 25.124 28.25 22.412 28.25 16.98V16.02C28.25 10.596 28.25 7.884 26.57 6.18C24.874 4.5 22.162 4.5 16.73 4.5H15.77C10.346 4.5 7.634 4.5 5.93 6.18ZM8.298 11.804H11.05C11.138 16.38 13.154 18.316 14.754 18.716V11.804H17.338V15.748C18.914 15.58 20.578 13.78 21.138 11.796H23.714C23.5038 12.823 23.0842 13.7956 22.4813 14.6531C21.8784 15.5106 21.1052 16.2347 20.21 16.78C21.2092 17.2772 22.0917 17.9806 22.7991 18.8438C23.5066 19.7071 24.0229 20.7105 24.314 21.788H21.474C20.866 19.892 19.346 18.42 17.338 18.22V21.788H17.018C11.546 21.788 8.426 18.044 8.298 11.804Z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="cta__content">
-                <h2 class="title2 title2--dark cta__title">
-                  Следите за новостями нашего Telegram-бота в социальных сетях!
-                </h2>
-                <div class="cta__buttons">
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="btn btn-reset btn--dark cta__btn"
-                  >
-                    /перейти в telegram
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.93 6.18C4.25 7.876 4.25 10.588 4.25 16.02V16.98C4.25 22.404 4.25 25.116 5.93 26.82C7.626 28.5 10.338 28.5 15.77 28.5H16.73C22.154 28.5 24.866 28.5 26.57 26.82C28.25 25.124 28.25 22.412 28.25 16.98V16.02C28.25 10.596 28.25 7.884 26.57 6.18C24.874 4.5 22.162 4.5 16.73 4.5H15.77C10.346 4.5 7.634 4.5 5.93 6.18ZM8.298 11.804H11.05C11.138 16.38 13.154 18.316 14.754 18.716V11.804H17.338V15.748C18.914 15.58 20.578 13.78 21.138 11.796H23.714C23.5038 12.823 23.0842 13.7956 22.4813 14.6531C21.8784 15.5106 21.1052 16.2347 20.21 16.78C21.2092 17.2772 22.0917 17.9806 22.7991 18.8438C23.5066 19.7071 24.0229 20.7105 24.314 21.788H21.474C20.866 19.892 19.346 18.42 17.338 18.22V21.788H17.018C11.546 21.788 8.426 18.044 8.298 11.804Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="cta__content">
+        <h2 class="title2 title2--dark cta__title">
+          Следите за новостями нашего Telegram-бота в социальных сетях!
+        </h2>
+        <div class="cta__buttons">
+          <a href="#" target="_blank" class="btn btn-reset btn--dark cta__btn">
+            /перейти в telegram
 
-                    <svg
-                      width="33"
-                      height="33"
-                      viewBox="0 0 33 33"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.75 3.1665C9.39002 3.1665 3.41669 9.13984 3.41669 16.4998C3.41669 23.8598 9.39002 29.8332 16.75 29.8332C24.11 29.8332 30.0834 23.8598 30.0834 16.4998C30.0834 9.13984 24.11 3.1665 16.75 3.1665ZM22.9367 12.2332C22.7367 14.3398 21.87 19.4598 21.43 21.8198C21.2434 22.8198 20.87 23.1532 20.5234 23.1932C19.75 23.2598 19.1634 22.6865 18.4167 22.1932C17.2434 21.4198 16.5767 20.9398 15.4434 20.1932C14.1234 19.3265 14.9767 18.8465 15.7367 18.0732C15.9367 17.8732 19.35 14.7665 19.4167 14.4865C19.4259 14.4441 19.4247 14.4001 19.4131 14.3582C19.4015 14.3164 19.3798 14.2781 19.35 14.2465C19.27 14.1798 19.1634 14.2065 19.07 14.2198C18.95 14.2465 17.0834 15.4865 13.4434 17.9398C12.91 18.2998 12.43 18.4865 12.0034 18.4732C11.5234 18.4598 10.6167 18.2065 9.93669 17.9798C9.09669 17.7132 8.44335 17.5665 8.49669 17.0998C8.52335 16.8598 8.85669 16.6198 9.48335 16.3665C13.3767 14.6732 15.9634 13.5532 17.2567 13.0198C20.9634 11.4732 21.7234 11.2065 22.23 11.2065C22.3367 11.2065 22.59 11.2332 22.75 11.3665C22.8834 11.4732 22.9234 11.6198 22.9367 11.7265C22.9234 11.8065 22.95 12.0465 22.9367 12.2332Z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="btn btn-reset btn--dark cta__btn"
-                  >
-                    /перейти в вконтакте
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.75 3.1665C9.39002 3.1665 3.41669 9.13984 3.41669 16.4998C3.41669 23.8598 9.39002 29.8332 16.75 29.8332C24.11 29.8332 30.0834 23.8598 30.0834 16.4998C30.0834 9.13984 24.11 3.1665 16.75 3.1665ZM22.9367 12.2332C22.7367 14.3398 21.87 19.4598 21.43 21.8198C21.2434 22.8198 20.87 23.1532 20.5234 23.1932C19.75 23.2598 19.1634 22.6865 18.4167 22.1932C17.2434 21.4198 16.5767 20.9398 15.4434 20.1932C14.1234 19.3265 14.9767 18.8465 15.7367 18.0732C15.9367 17.8732 19.35 14.7665 19.4167 14.4865C19.4259 14.4441 19.4247 14.4001 19.4131 14.3582C19.4015 14.3164 19.3798 14.2781 19.35 14.2465C19.27 14.1798 19.1634 14.2065 19.07 14.2198C18.95 14.2465 17.0834 15.4865 13.4434 17.9398C12.91 18.2998 12.43 18.4865 12.0034 18.4732C11.5234 18.4598 10.6167 18.2065 9.93669 17.9798C9.09669 17.7132 8.44335 17.5665 8.49669 17.0998C8.52335 16.8598 8.85669 16.6198 9.48335 16.3665C13.3767 14.6732 15.9634 13.5532 17.2567 13.0198C20.9634 11.4732 21.7234 11.2065 22.23 11.2065C22.3367 11.2065 22.59 11.2332 22.75 11.3665C22.8834 11.4732 22.9234 11.6198 22.9367 11.7265C22.9234 11.8065 22.95 12.0465 22.9367 12.2332Z"
+              />
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="btn btn-reset btn--dark cta__btn">
+            /перейти в вконтакте
 
-                    <svg
-                      width="33"
-                      height="33"
-                      viewBox="0 0 33 33"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.93 6.18C4.25 7.876 4.25 10.588 4.25 16.02V16.98C4.25 22.404 4.25 25.116 5.93 26.82C7.626 28.5 10.338 28.5 15.77 28.5H16.73C22.154 28.5 24.866 28.5 26.57 26.82C28.25 25.124 28.25 22.412 28.25 16.98V16.02C28.25 10.596 28.25 7.884 26.57 6.18C24.874 4.5 22.162 4.5 16.73 4.5H15.77C10.346 4.5 7.634 4.5 5.93 6.18ZM8.298 11.804H11.05C11.138 16.38 13.154 18.316 14.754 18.716V11.804H17.338V15.748C18.914 15.58 20.578 13.78 21.138 11.796H23.714C23.5038 12.823 23.0842 13.7956 22.4813 14.6531C21.8784 15.5106 21.1052 16.2347 20.21 16.78C21.2092 17.2772 22.0917 17.9806 22.7991 18.8438C23.5066 19.7071 24.0229 20.7105 24.314 21.788H21.474C20.866 19.892 19.346 18.42 17.338 18.22V21.788H17.018C11.546 21.788 8.426 18.044 8.298 11.804Z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 33 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.93 6.18C4.25 7.876 4.25 10.588 4.25 16.02V16.98C4.25 22.404 4.25 25.116 5.93 26.82C7.626 28.5 10.338 28.5 15.77 28.5H16.73C22.154 28.5 24.866 28.5 26.57 26.82C28.25 25.124 28.25 22.412 28.25 16.98V16.02C28.25 10.596 28.25 7.884 26.57 6.18C24.874 4.5 22.162 4.5 16.73 4.5H15.77C10.346 4.5 7.634 4.5 5.93 6.18ZM8.298 11.804H11.05C11.138 16.38 13.154 18.316 14.754 18.716V11.804H17.338V15.748C18.914 15.58 20.578 13.78 21.138 11.796H23.714C23.5038 12.823 23.0842 13.7956 22.4813 14.6531C21.8784 15.5106 21.1052 16.2347 20.21 16.78C21.2092 17.2772 22.0917 17.9806 22.7991 18.8438C23.5066 19.7071 24.0229 20.7105 24.314 21.788H21.474C20.866 19.892 19.346 18.42 17.338 18.22V21.788H17.018C11.546 21.788 8.426 18.044 8.298 11.804Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       </main>
       <footer class="footer">
-        <div class="container">
-          <div class="footer__top">
-            <div class="footer__left">
-              <a href="./" class="footer__logo">
-                <img src="./img/logo-blue.webp" alt="" />
-              </a>
-              <small class="footer__copy">
-                &copy;&nbsp;DewinConferenceBot 2024&nbsp;&mdash; 2025<br />
-                Все&nbsp;права защищены.
-              </small>
-            </div>
-            <div class="footer__right">
-              <div class="footer__col">
-                <p class="footer__capture">Навигация</p>
-                <nav class="footer__nav">
-                  <ul>
-                    <li>
-                      <a href="#">Главная</a>
-                    </li>
-                    <li>
-                      <a href="#">Новости</a>
-                    </li>
-                    <li>
-                      <a href="#">Магазин</a>
-                    </li>
-                    <li>
-                      <a href="#">Список команд</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="footer__col">
-                <p class="footer__capture">Проект</p>
-                <nav class="footer__nav">
-                  <ul>
-                    <li>
-                      <a href="#">О проекте</a>
-                    </li>
-                    <li>
-                      <a href="#"> Telegram канал</a>
-                    </li>
-                    <li>
-                      <a href="#">VK группа</a>
-                    </li>
-                    <li>
-                      <a href="#">Статьи</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="footer__col">
-                <p class="footer__capture">Обновления</p>
-                <nav class="footer__nav">
-                  <ul>
-                    <li>
-                      <a href="#">Обновление 1.0</a>
-                    </li>
-                    <li>
-                      <a href="#">Обновление 1.1</a>
-                    </li>
-                    <li>
-                      <a href="#">Обновление 1.2</a>
-                    </li>
-                    <li>
-                      <a href="#">Обновление 1.3</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="footer__col">
-                <p class="footer__capture">Документация</p>
-                <nav class="footer__nav">
-                  <ul>
-                    <li>
-                      <a href="#">FAQ</a>
-                    </li>
-                    <li>
-                      <a href="#">Польз. соглашение</a>
-                    </li>
-                    <li>
-                      <a href="#">Полит. конфеденц.</a>
-                    </li>
-                    <li>
-                      <a href="#">Полит. cookies</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-          <div class="footer__bottom">
-            <small>
-              Продолжая использование нашего проекта (сайта или/и бота),
-              вы&nbsp;подтверждаете, что ознакомлены и&nbsp;соглашаетесь
-              с&nbsp;нашей
-              <a href="#">Политикой конфиденциальности</a> и&nbsp;<a href="#"
-                >Политикой использования cookies</a
-              >. Мы&nbsp;используем cookies для улучшения функциональности
-              сайта, анализа его использования и&nbsp;персонализации контента.
-              Вы&nbsp;можете настроить параметры cookies в&nbsp;вашем браузере,
-              но&nbsp;учтите, что это может повлиять на&nbsp;работу некоторых
-              функций сайта.
-            </small>
-          </div>
-          <small class="footer__copy footer__copy--mob">
-            &copy;&nbsp;DewinConferenceBot 2024&nbsp;&mdash; 2025<br />
-            Все&nbsp;права защищены.
-          </small>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__left">
+        <a href="./" class="footer__logo">
+          <img src="./img/logo-blue.webp" alt="" />
+        </a>
+        <small class="footer__copy">
+          &copy;&nbsp;DewinConferenceBot 2024&nbsp;&mdash; 2025<br />
+          Все&nbsp;права защищены.
+        </small>
+      </div>
+      <div class="footer__right">
+        <div class="footer__col">
+          <p class="footer__capture">Навигация</p>
+          <nav class="footer__nav">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Новости</a>
+              </li>
+              <li>
+                <a href="#">Магазин</a>
+              </li>
+              <li>
+                <a href="#">Список команд</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </footer>
-      <script>
-        const footerCol = document.querySelectorAll(".footer__col");
+        <div class="footer__col">
+          <p class="footer__capture">Проект</p>
+          <nav class="footer__nav">
+            <ul>
+              <li>
+                <a href="#">О проекте</a>
+              </li>
+              <li>
+                <a href="#"> Telegram канал</a>
+              </li>
+              <li>
+                <a href="#">VK группа</a>
+              </li>
+              <li>
+                <a href="#">Статьи</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <p class="footer__capture">Обновления</p>
+          <nav class="footer__nav">
+            <ul>
+              <li>
+                <a href="#">Обновление 1.0</a>
+              </li>
+              <li>
+                <a href="#">Обновление 1.1</a>
+              </li>
+              <li>
+                <a href="#">Обновление 1.2</a>
+              </li>
+              <li>
+                <a href="#">Обновление 1.3</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <p class="footer__capture">Документация</p>
+          <nav class="footer__nav">
+            <ul>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">Польз. соглашение</a>
+              </li>
+              <li>
+                <a href="#">Полит. конфеденц.</a>
+              </li>
+              <li>
+                <a href="#">Полит. cookies</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <small>
+        Продолжая использование нашего проекта (сайта или/и бота),
+        вы&nbsp;подтверждаете, что ознакомлены и&nbsp;соглашаетесь с&nbsp;нашей
+        <a href="#">Политикой конфиденциальности</a> и&nbsp;<a href="#"
+          >Политикой использования cookies</a
+        >. Мы&nbsp;используем cookies для улучшения функциональности сайта,
+        анализа его использования и&nbsp;персонализации контента. Вы&nbsp;можете
+        настроить параметры cookies в&nbsp;вашем браузере, но&nbsp;учтите, что
+        это может повлиять на&nbsp;работу некоторых функций сайта.
+      </small>
+    </div>
+    <small class="footer__copy footer__copy--mob">
+      &copy;&nbsp;DewinConferenceBot 2024&nbsp;&mdash; 2025<br />
+      Все&nbsp;права защищены.
+    </small>
+  </div>
+</footer>
+<script>
+  const footerCol = document.querySelectorAll(".footer__col");
 
-        if (footerCol.length > 0) {
-          footerCol.forEach((item) => {
-            const btn = item.querySelector(".footer__capture");
-            const body = item.querySelector(".footer__nav");
+  if (footerCol.length > 0) {
+    footerCol.forEach((item) => {
+      const btn = item.querySelector(".footer__capture");
+      const body = item.querySelector(".footer__nav");
 
-            btn.addEventListener("click", (e) => {
-              let isActive = btn.classList.toggle("active");
+      btn.addEventListener("click", (e) => {
+        let isActive = btn.classList.toggle("active");
 
-              body.style.maxHeight = isActive ? body.scrollHeight + "px" : null;
-            });
-          });
-        }
-      </script>
+        body.style.maxHeight = isActive ? body.scrollHeight + "px" : null;
+      });
+    });
+  }
+</script>
+
     </div>
   </body>
 </html>
