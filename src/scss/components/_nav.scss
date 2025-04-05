@@ -7,13 +7,36 @@
     align-items: center;
     gap: 46px;
 
+    @include tablet {
+      gap: 20px;
+    }
+
     & > li {
       a {
+        position: relative;
+        display: inline-block;
         font-family: var(--second-family);
         font-weight: 400;
         font-size: 17px;
         line-height: 176%;
         color: var(--belyy);
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 10%;
+          height: 1px;
+          background-color: currentColor;
+          opacity: 0;
+          transition: 0.3s ease-in;
+        }
+        @include hover {
+          &::after {
+            opacity: 1;
+            width: 100%;
+          }
+        }
       }
     }
   }

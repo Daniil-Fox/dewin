@@ -101,5 +101,25 @@
         это может повлиять на&nbsp;работу некоторых функций сайта.
       </small>
     </div>
+    <small class="footer__copy footer__copy--mob">
+      &copy;&nbsp;DewinConferenceBot 2024&nbsp;&mdash; 2025<br />
+      Все&nbsp;права защищены.
+    </small>
   </div>
 </footer>
+<script>
+  const footerCol = document.querySelectorAll(".footer__col");
+
+  if (footerCol.length > 0) {
+    footerCol.forEach((item) => {
+      const btn = item.querySelector(".footer__capture");
+      const body = item.querySelector(".footer__nav");
+
+      btn.addEventListener("click", (e) => {
+        let isActive = btn.classList.toggle("active");
+
+        body.style.maxHeight = isActive ? body.scrollHeight + "px" : null;
+      });
+    });
+  }
+</script>

@@ -22,7 +22,7 @@
       </nav>
       <div class="header__right">
         <div class="header__dropdown language-dropdown">
-          <button class="dropdown-button btn-reset" onclick="toggleDropdown()">
+          <button class="dropdown-button btn-reset">
             <svg
               class="globe-icon"
               width="32"
@@ -55,21 +55,47 @@
             <div class="language-option" onclick="selectLanguage('EN')">EN</div>
           </div>
         </div>
-        <a href="#" class="header__btn btn-reset">Вход</a>
+        <a href="#" class="header__btn btn-reset btn">Вход</a>
       </div>
+
+      <button
+        class="btn-reset burger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        data-burger
+      >
+        <span class="burger__line"></span>
+      </button>
     </div>
   </div>
+
+  @include('./menu.html')
 </header>
 <script>
+  const dropdownBtn = document.querySelector(".dropdown-button");
+  const languageDropdown = document.getElementById("languageDropdown");
+  const selectedLanguage = document.getElementById("selected-language");
+  const options = document.querySelectorAll(".language-option");
+
+  dropdownBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleDropdown();
+  });
+
   function toggleDropdown() {
-    document.getElementById("languageDropdown").classList.toggle("show");
+    languageDropdown.classList.toggle("show");
   }
 
+  options.forEach((option) => {
+    option.addEventListener("click", (e) => {
+      const dataset = e.dataset.lang;
+      selectLanguage(dataset);
+    });
+  });
   function selectLanguage(lang) {
-    document.getElementById("selected-language").textContent = lang;
+    selectedLanguage.textContent = lang;
 
-    // Update active state
-    const options = document.getElementsByClassName("language-option");
     for (let option of options) {
       option.classList.remove("active");
       if (option.textContent.trim() === lang) {
@@ -77,12 +103,11 @@
       }
     }
 
-    // Close dropdown
-    document.getElementById("languageDropdown").classList.remove("show");
+    languageDropdown.classList.remove("show");
   }
 
-  // Close dropdown when clicking outside
-  window.onclick = function (event) {
+  window.addEventListener("click", (event) => {
+    event.stopPropagation();
     if (!event.target.matches(".dropdown-button")) {
       const dropdowns = document.getElementsByClassName("dropdown-content");
       for (let dropdown of dropdowns) {
@@ -91,5 +116,78 @@
         }
       }
     }
+  });
+  const enableScroll = () => {
+    const fixBlocks = document?.querySelectorAll(".fixed-block");
+    const body = document.body;
+    const pagePosition = parseInt(document.body.dataset.position, 10);
+    fixBlocks.forEach((el) => {
+      el.style.paddingRight = "0px";
+    });
+    document.body.style.paddingRight = "0px";
+
+    document.body.style.top = "auto";
+    document.body.classList.remove("dis-scroll");
+    window.scroll({
+      top: pagePosition,
+      left: 0,
+    });
+    document.body.removeAttribute("data-position");
+    document.documentElement.style.scrollBehavior = "smooth";
   };
+
+  const disableScroll = () => {
+    const fixBlocks = document?.querySelectorAll(".fixed-block");
+    const pagePosition = window.scrollY;
+    const paddingOffset = `${window.innerWidth - document.body.offsetWidth}px`;
+
+    document.documentElement.style.scrollBehavior = "none";
+    fixBlocks.forEach((el) => {
+      el.style.paddingRight = paddingOffset;
+    });
+    document.body.style.paddingRight = paddingOffset;
+    document.body.classList.add("dis-scroll");
+    document.body.dataset.position = pagePosition;
+    document.body.style.top = `-${pagePosition}px`;
+  };
+
+  (function () {
+    const burger = document?.querySelector("[data-burger]");
+    const menu = document?.querySelector("[data-menu]");
+    const menuItems = document?.querySelectorAll("[data-menu-item]");
+    const overlay = document?.querySelector("[data-menu-overlay]");
+
+    burger?.addEventListener("click", (e) => {
+      burger?.classList.toggle("burger--active");
+      menu?.classList.toggle("menu--active");
+
+      if (menu?.classList.contains("menu--active")) {
+        burger?.setAttribute("aria-expanded", "true");
+        burger?.setAttribute("aria-label", "Закрыть меню");
+        disableScroll();
+      } else {
+        burger?.setAttribute("aria-expanded", "false");
+        burger?.setAttribute("aria-label", "Открыть меню");
+        enableScroll();
+      }
+    });
+
+    overlay?.addEventListener("click", () => {
+      burger?.setAttribute("aria-expanded", "false");
+      burger?.setAttribute("aria-label", "Открыть меню");
+      burger.classList.remove("burger--active");
+      menu.classList.remove("menu--active");
+      enableScroll();
+    });
+
+    menuItems?.forEach((el) => {
+      el.addEventListener("click", () => {
+        burger?.setAttribute("aria-expanded", "false");
+        burger?.setAttribute("aria-label", "Открыть меню");
+        burger.classList.remove("burger--active");
+        menu.classList.remove("menu--active");
+        enableScroll();
+      });
+    });
+  })();
 </script>

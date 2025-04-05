@@ -1,23 +1,63 @@
 .cta {
   padding-top: 250px;
   margin-bottom: -278px;
+
+  @media (max-width: 1000px) {
+    margin-bottom: -200px;
+    padding-top: 150px;
+  }
   &__container {
     display: flex;
     gap: 70px;
     max-width: 1310px;
     margin: 0 auto;
+    @include tablet {
+      gap: 30px;
+    }
+    @media (max-width: 1000px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 44px;
+    }
   }
   &__img {
-    width: 3;
+    width: 100%;
+    max-width: 393px;
+    flex-shrink: 0;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   &__buttons {
     display: flex;
     gap: 28px;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+
+    &--mob {
+      position: absolute;
+      left: 43px;
+      right: 43px;
+      bottom: 35%;
+      display: none;
+      @media (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
   }
   &__title {
     margin-bottom: 56px;
-    text-align: left;
     text-align: justify;
+    @media (max-width: 1000px) {
+      margin: 0;
+    }
     &::after {
       content: "";
       display: inline-block;
@@ -27,6 +67,11 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      vertical-align: top;
+      @include small-tablet {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -34,6 +79,19 @@
     flex: 1;
     padding: 20px;
     font-size: 28px;
+    @include tablet {
+      font-size: 16px;
+    }
+    @media (max-width: 400px) {
+      font-size: 12px;
+      padding: 20px 5px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
     svg {
       fill: currentColor;
       margin-left: 4px;

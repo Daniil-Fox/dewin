@@ -5,6 +5,10 @@
   background-position: 50% 45%;
   background-size: auto 705px;
   padding: 43px 0 60px;
+
+  @include small-tablet {
+    background-size: auto 340px;
+  }
   &__header {
     max-width: 1224px;
     margin: 0 auto;
@@ -14,6 +18,13 @@
     position: relative;
     margin-bottom: 56px;
     line-height: 1.2;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include small-tablet {
+      margin-bottom: 28px;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -25,18 +36,39 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+
+      @include small-tablet {
+        width: 60px;
+        height: 60px;
+      }
+
+      @include mobile {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
   &__desc {
     max-width: 830px;
     margin: 0 auto;
     margin-bottom: 56px;
+
+    @include small-tablet {
+      display: none;
+    }
   }
   &__buttons {
     margin-bottom: 73px;
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include small-tablet {
+      margin-bottom: 28px;
+    }
   }
   &__img {
     width: 100%;
@@ -44,6 +76,12 @@
     height: auto;
     margin: 0 auto;
     margin-bottom: 50px;
+    @include small-tablet {
+      max-width: 400px;
+    }
+    @include mobile {
+      max-width: 280px;
+    }
     img {
       display: block;
       width: 100%;
@@ -61,7 +99,16 @@
     line-height: 140%;
     text-align: center;
     color: var(--belyy);
-
+    @include tablet {
+      font-size: 32px;
+    }
+    @include small-tablet {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    @include mobile {
+      font-size: 24px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -75,6 +122,17 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+      @include small-tablet {
+        width: 40px;
+        height: 40px;
+        right: unset;
+        left: -36px;
+        transform: none;
+      }
     }
     &::after {
       content: "";
@@ -89,6 +147,17 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+      @include small-tablet {
+        width: 40px;
+        height: 40px;
+        left: unset;
+        right: -46px;
+        transform: rotateZ(30deg);
+      }
     }
   }
 
@@ -96,6 +165,9 @@
     max-width: 545px;
     margin: 0 auto;
     position: relative;
+    @include small-tablet {
+      max-width: 60%;
+    }
     span {
       display: block;
       &:not(:last-child) {
@@ -115,6 +187,15 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+      @include small-tablet {
+        width: 40px;
+        height: 40px;
+        left: -10px;
+      }
     }
     &::after {
       content: "";
@@ -128,6 +209,15 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+      @include small-tablet {
+        width: 40px;
+        height: 40px;
+        right: -10px;
+      }
     }
   }
 }

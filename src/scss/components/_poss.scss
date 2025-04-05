@@ -1,10 +1,18 @@
 .poss {
   position: relative;
   padding: 100px 0;
+
+  @include small-tablet {
+    padding: 45px 0;
+  }
   &__header {
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 112px;
+
+    @include small-tablet {
+      margin-bottom: 56px;
+    }
   }
   &__title {
     margin-bottom: 20px;
@@ -19,6 +27,15 @@
       background-repeat: no-repeat;
       background-position: center;
       vertical-align: middle;
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+      @include small-tablet {
+        width: 40px;
+        margin-left: 4px;
+        height: 40px;
+      }
     }
   }
   &__items {
@@ -62,6 +79,12 @@
 
   &__capture {
     margin-bottom: 28px;
+    @include tablet {
+      margin-bottom: 18px;
+    }
+    @include small-tablet {
+      margin-bottom: 12px;
+    }
   }
   &__list {
     display: flex;
@@ -69,6 +92,12 @@
     gap: 14px;
   }
   &__row {
+    &:not(:last-child) {
+      margin-bottom: 112px;
+      @include small-tablet {
+        margin-bottom: 56px;
+      }
+    }
     &:nth-child(even) {
       text-align: right;
 
@@ -91,6 +120,13 @@
   line-height: 140%;
   color: var(--chernyy);
   position: relative;
+  @include tablet {
+    font-size: 16px;
+  }
+  @include small-tablet {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
   &::after {
     content: "";
     display: inline-block;
