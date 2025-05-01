@@ -6,6 +6,7 @@ export const paths = {
     src: srcFolder,
     build: buildFolder,
   },
+  buildSrc: `${buildFolder}/src`,
   srcSvg: `${srcFolder}/img/svg/**.svg`,
   srcImgFolder: `${srcFolder}/img`,
   buildImgFolder: `${buildFolder}/img`,

@@ -1,0 +1,106 @@
+.lk-achiv {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-family);
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      text-align: center;
+      color: #000;
+
+      @include small-tablet {
+        font-size: 20px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 140%;
+      text-align: center;
+      color: var(--siniy);
+      transition: color 0.3s ease-in;
+      @include small-tablet {
+        font-size: 18px;
+      }
+      @include mobile {
+        font-size: 14px;
+      }
+      @include hover {
+        color: var(--svetlo-siniy);
+      }
+    }
+  }
+}
+
+.achiv-block {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000;
+    @include small-tablet {
+      font-size: 18px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.progress {
+  &__top {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #000;
+    @include small-tablet {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__bar {
+    background: #becdff;
+    height: 8px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: var(--progress-width);
+      background-color: var(--siniy);
+    }
+  }
+}

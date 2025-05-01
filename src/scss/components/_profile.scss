@@ -1,0 +1,99 @@
+.profile {
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__status {
+    gap: 10px;
+    font-weight: 300;
+    img {
+      display: block;
+      width: 24px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+    @include hover {
+      background-color: var(--svetlo-siniy);
+      color: var(--belyy);
+    }
+  }
+  &__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    @media (max-width: 1300px) {
+      width: 80px;
+      height: 80px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nickname {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000;
+  }
+
+  &__id {
+    cursor: pointer;
+    margin: 0;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--seryy);
+    span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__coins {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--zheltyy);
+
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      object-fit: contain;
+    }
+  }
+}

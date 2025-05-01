@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="settings">
+        <div class="container-sec">
+          <div class="breadcrumbs">
+            <ul>
+              <li>
+                <a href="#">Личный кабинет</a>
+              </li>
+              <li>
+                <span>Настройки</span>
+              </li>
+            </ul>
+          </div>
+          <h1 class="lk-title">Группы</h1>
+
+          <div class="settings__items">
+
+            <div class="settings__item setting">
+              <div class="setting__header">
+                <div class="setting__left">
+                  <div class="setting__avatar">
+                    <img src="./img/group/02.webp" alt="">
+                  </div>
+                  <p class="setting__name desc desc--dark">Название группы с таким длинным названием что оно занимает
+                    больше чем нужно Название группы с таким длинным названием что оно занимает
+                    больше чем нужно</p>
+                </div>
+                <button class="btn-reset setting__button">
+                  /настройки
+                  <span>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 22L8.20577 13L23.7942 13L16 22Z" fill="#0039FF" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="setting__body">
+                <ul class="setting__list list-reset">
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Приветственное сообщение</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="./hello.html" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Прощальное сообщение</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="./bye.html" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Ночной режим</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="night-mode-1" checked>
+                          <span>/вкл</span>
+                        </label>
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="night-mode-1">
+                          <span>
+                            /выкл
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Антиспам</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="anti-spam-1">
+                          <span>/вкл</span>
+                        </label>
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="anti-spam-1" checked>
+                          <span>
+                            /выкл
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Запрещенные слова</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <a href="#" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Запрет на ссылки</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="#" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Язык</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <div class="setting-item__dropdown">
+                          <button class="btn-reset setting-item__dropdown-btn">
+                            <img src="./img/flags/ru.webp" alt="Русский">
+                            русский
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 22L8.20577 13L23.7942 13L16 22Z" />
+                            </svg>
+                          </button>
+                          <div class="setting-item__dropdown-content">
+                            <div class="setting-item__dropdown-item active">
+                              <img src="./img/flags/ru.webp" alt="Русский">
+                              Русский
+                            </div>
+                            <div class="setting-item__dropdown-item">
+                              <img src="./img/flags/en.webp" alt="English">
+                              English
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="settings__item setting">
+              <div class="setting__header">
+                <div class="setting__left">
+                  <div class="setting__avatar">
+                    <img src="./img/group/02.webp" alt="">
+                  </div>
+                  <p class="setting__name desc desc--dark">Название группы с таким длинным названием что оно занимает
+                    больше чем нужно Название группы с таким длинным названием что оно занимает
+                    больше чем нужно</p>
+                </div>
+                <button class="btn-reset setting__button">
+                  /настройки
+                  <span>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 22L8.20577 13L23.7942 13L16 22Z" fill="#0039FF" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="setting__body">
+                <ul class="setting__list list-reset">
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Приветственное сообщение</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="./hello.html" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Прощальное сообщение</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="./bye.html" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Ночной режим</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="night-mode-2" checked>
+                          <span>/вкл</span>
+                        </label>
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="night-mode-2">
+                          <span>
+                            /выкл
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Антиспам</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="anti-spam-2">
+                          <span>/вкл</span>
+                        </label>
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="anti-spam-2" checked>
+                          <span>
+                            /выкл
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Запрещенные слова</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <a href="#" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Запрет на ссылки</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="#" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Язык</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <div class="setting-item__dropdown">
+                          <button class="btn-reset setting-item__dropdown-btn">
+                            <img src="./img/flags/ru.webp" alt="Русский">
+                            русский
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 22L8.20577 13L23.7942 13L16 22Z" />
+                            </svg>
+                          </button>
+                          <div class="setting-item__dropdown-content">
+                            <div class="setting-item__dropdown-item active">
+                              <img src="./img/flags/ru.webp" alt="Русский">
+                              Русский
+                            </div>
+                            <div class="setting-item__dropdown-item">
+                              <img src="./img/flags/en.webp" alt="English">
+                              English
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="settings__item setting">
+              <div class="setting__header">
+                <div class="setting__left">
+                  <div class="setting__avatar">
+                    <img src="./img/group/02.webp" alt="">
+                  </div>
+                  <p class="setting__name desc desc--dark">Название группы с таким длинным названием что оно занимает
+                    больше чем нужно Название группы с таким длинным названием что оно занимает
+                    больше чем нужно</p>
+                </div>
+                <button class="btn-reset setting__button">
+                  /настройки
+                  <span>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 22L8.20577 13L23.7942 13L16 22Z" fill="#0039FF" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="setting__body">
+                <ul class="setting__list list-reset">
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Приветственное сообщение</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="./hello.html" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Прощальное сообщение</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="./bye.html" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Ночной режим</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="night-mode-3" checked>
+                          <span>/вкл</span>
+                        </label>
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="night-mode-3">
+                          <span>
+                            /выкл
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Антиспам</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="anti-spam-3">
+                          <span>/вкл</span>
+                        </label>
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="anti-spam-3" checked>
+                          <span>
+                            /выкл
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Запрещенные слова</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <a href="#" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Запрет на ссылки</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="#" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Язык</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <div class="setting-item__dropdown">
+                          <button class="btn-reset setting-item__dropdown-btn">
+                            <img src="./img/flags/ru.webp" alt="Русский">
+                            русский
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 22L8.20577 13L23.7942 13L16 22Z" />
+                            </svg>
+                          </button>
+                          <div class="setting-item__dropdown-content">
+                            <div class="setting-item__dropdown-item active">
+                              <img src="./img/flags/ru.webp" alt="Русский">
+                              Русский
+                            </div>
+                            <div class="setting-item__dropdown-item">
+                              <img src="./img/flags/en.webp" alt="English">
+                              English
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="settings__item setting">
+              <div class="setting__header">
+                <div class="setting__left">
+                  <div class="setting__avatar">
+                    <img src="./img/group/02.webp" alt="">
+                  </div>
+                  <p class="setting__name desc desc--dark">Название группы с таким длинным названием что оно занимает
+                    больше чем нужно Название группы с таким длинным названием что оно занимает
+                    больше чем нужно</p>
+                </div>
+                <button class="btn-reset setting__button">
+                  /настройки
+                  <span>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 22L8.20577 13L23.7942 13L16 22Z" fill="#0039FF" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="setting__body">
+                <ul class="setting__list list-reset">
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Приветственное сообщение</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="./hello.html" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Прощальное сообщение</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="./bye.html" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Ночной режим</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="night-mode-4" checked>
+                          <span>/вкл</span>
+                        </label>
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="night-mode-4">
+                          <span>
+                            /выкл
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Антиспам</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="anti-spam-4">
+                          <span>/вкл</span>
+                        </label>
+                        <label class="setting-item__checkbox">
+                          <input type="radio" class="visually-hidden" name="anti-spam-4" checked>
+                          <span>
+                            /выкл
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Запрещенные слова</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <a href="#" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Запрет на ссылки</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <img src="./img/crown.svg" alt="">
+                        <a href="#" class="setting-item__link">/подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="setting__item setting-item">
+                    <div class="setting-item__left">
+                      <div class="setting-item__name">Язык</div>
+                      <span class="setting-item__info" data-info="Сообщение для тех, кто первый раз вступает в группу">
+                        <img src="./img/info.svg" alt="">
+                      </span>
+                    </div>
+                    <div class="setting-item__right">
+                      <div class="setting-item__row">
+                        <div class="setting-item__dropdown">
+                          <button class="btn-reset setting-item__dropdown-btn">
+                            <img src="./img/flags/ru.webp" alt="Русский">
+                            русский
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16 22L8.20577 13L23.7942 13L16 22Z" />
+                            </svg>
+                          </button>
+                          <div class="setting-item__dropdown-content">
+                            <div class="setting-item__dropdown-item active">
+                              <img src="./img/flags/ru.webp" alt="Русский">
+                              Русский
+                            </div>
+                            <div class="setting-item__dropdown-item">
+                              <img src="./img/flags/en.webp" alt="English">
+                              English
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

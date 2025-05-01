@@ -16,6 +16,9 @@
   min-width: 360px;
   min-height: 100%;
   font-size: 16px;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -29,7 +32,15 @@ a {
 }
 
 .site-container {
+  flex-grow: 1;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .is-hidden {
@@ -79,6 +90,12 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+}
+
+.container-sec {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: calc(1328px + var(--container-offset) * 2);
 }
 
 .centered {

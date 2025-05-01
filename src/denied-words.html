@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="hello">
+        <div class="container-sec">
+          <div class="hello__top">
+            <a href="./settings.html" class="btn btn-reset btn--stroke">/назад</a>
+            <div class="hello__group">
+              <div class="hello__avatar">
+                <img src="./img/group/01.webp" alt="avatar" />
+              </div>
+              <p class="hello__setting">
+                <span>Название группы </span>
+                Запрещенные слова
+              </p>
+            </div>
+          </div>
+
+          <div class="denied__items">
+            <button class="btn-reset btn btn--stroke denied__add">/добавить</button>
+            <div class="denied__wrapper">
+              <div class="denied__message">
+                <div class="denied__message-content">
+                  <textarea class="denied__message-input"></textarea>
+                  <div class="denied__message-actions">
+                    <button class="btn-reset btn btn--primary denied__message-save">/добавить</button>
+                    <button class="btn-reset btn btn--stroke denied__message-cancel">/отмена</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="denied__words">
+              <!-- Сюда будут добавляться слова -->
+            </div>
+            <div class="denied__row">
+              <p class="lk-title denied__capture">Наказание:</p>
+              <div class="denied__actions">
+                <div class="denied__dropdown">
+                  <button class="btn-reset btn btn--blue denied__dropdown-btn">
+                    /выбрать
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 22L8.20577 13L23.7942 13L16 22Z" fill="currentColor" />
+                    </svg>
+                  </button>
+                  <div class="denied__dropdown-content">
+                    <button class="btn-reset denied__dropdown-item">мут</button>
+                    <button class="btn-reset denied__dropdown-item">кик</button>
+                    <button class="btn-reset denied__dropdown-item">бан</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

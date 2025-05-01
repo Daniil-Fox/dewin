@@ -1,0 +1,516 @@
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="lk">
+        <div class="container-sec">
+          <div class="lk__container">
+            <div class="lk__aside lk-aside">
+              <div class="lk-aside__top">
+                <div class="profile">
+                  <div class="profile__row">
+                    <div class="profile__avatar">
+                      <img src="./img/lk/avatar.webp" alt="">
+                    </div>
+                    <div class="profile__data">
+                      <p class="profile__nickname">@никнейм</p>
+                      <p class="profile__id">
+                        id: 1302525645
+                        <span>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M6 11C6 8.172 6 6.757 6.879 5.879C7.757 5 9.172 5 12 5H15C17.828 5 19.243 5 20.121 5.879C21 6.757 21 8.172 21 11V16C21 18.828 21 20.243 20.121 21.121C19.243 22 17.828 22 15 22H12C9.172 22 7.757 22 6.879 21.121C6 20.243 6 18.828 6 16V11Z"
+                              stroke="#989898" stroke-width="1.5" />
+                            <path
+                              d="M6 19C5.20435 19 4.44129 18.6839 3.87868 18.1213C3.31607 17.5587 3 16.7956 3 16V10C3 6.229 3 4.343 4.172 3.172C5.344 2.001 7.229 2 11 2H15C15.7956 2 16.5587 2.31607 17.1213 2.87868C17.6839 3.44129 18 4.20435 18 5"
+                              stroke="#989898" stroke-width="1.5" />
+                          </svg>
+                        </span>
+                      </p>
+                      <p class="profile__coins">
+                        531 <img src="./img/lk/coin.svg" alt="">
+                      </p>
+                    </div>
+                  </div>
+                  <div class="profile__status btn btn--blue">
+                    <img src="./img/robot.webp" alt="">
+                    Подписка активна
+                  </div>
+                </div>
+              </div>
+
+              <div class="lk-aside__achievements lk-achiv">
+                <div class="lk-achiv__header">
+                  <p>Достижения</p>
+                  <a href="#">Все</a>
+                </div>
+                <div class="lk-achiv__block achiv-block">
+                  <div class="achiv-block__header">
+                    <p class="achiv-block__title">Полученные</p>
+                    <div class="achiv-block__progress progress">
+                      <div class="progress__top">
+                        <div class="progress__left">10/20</div>
+                        <div class="progress__percent">50%</div>
+                      </div>
+                      <div class="progress__bar" style="--progress-width: 50%">
+                        <div class="progress__line"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="achiv-block__items">
+                    <div class="achiv__item achivment">
+                      <div class="achivment__icon">
+                        <img src="./img/achivments/01.svg" alt="">
+                      </div>
+                      <div class="achivment__info">
+                        <p class="achivment__title">Мал, но удал</p>
+                        <p class="achivment__desc">Напиши 1000 сообщений в группах с&nbsp;ботом</p>
+                      </div>
+                    </div>
+                    <div class="achiv__item achivment">
+                      <div class="achivment__icon">
+                        <img src="./img/achivments/02.svg" alt="">
+                      </div>
+                      <div class="achivment__info">
+                        <p class="achivment__title">Легенда чатов</p>
+                        <p class="achivment__desc">Напиши 25000 сообщений в группах с ботом</p>
+                      </div>
+                    </div>
+                    <div class="achiv__item achivment">
+                      <div class="achivment__icon">
+                        <img src="./img/achivments/03.svg" alt="">
+                      </div>
+                      <div class="achivment__info">
+                        <p class="achivment__title">Мьют - как искусство</p>
+                        <p class="achivment__desc">Замьють пользователя в группе</p>
+                      </div>
+                    </div>
+                    <div class="achiv__item achivment">
+                      <div class="achivment__icon">
+                        <img src="./img/achivments/04.svg" alt="">
+                      </div>
+                      <div class="achivment__info">
+                        <p class="achivment__title">Изгнание грешника</p>
+                        <p class="achivment__desc">Забань пользователя в группе</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lk-achiv__block achiv-block">
+                  <div class="achiv-block__header">
+                    <p class="achiv-block__title">Ближайшие</p>
+                  </div>
+                  <div class="achiv-block__items">
+                    <div class="achiv__item achivment">
+                      <div class="achivment__icon">
+                        <img src="./img/achivments/05.svg" alt="">
+                      </div>
+                      <div class="achivment__info">
+                        <p class="achivment__title">Уважение - сила!</p>
+                        <p class="achivment__desc">Набери 25 репутации в группе</p>
+                      </div>
+                    </div>
+                    <div class="achiv__item achivment">
+                      <div class="achivment__icon">
+                        <img src="./img/achivments/06.svg" alt="">
+                      </div>
+                      <div class="achivment__info">
+                        <p class="achivment__title">Не любимчик</p>
+                        <p class="achivment__desc">Набери -10 репутации в группе</p>
+                      </div>
+                    </div>
+                    <div class="achiv__item achivment">
+                      <div class="achivment__icon">
+                        <img src="./img/achivments/07.svg" alt="">
+                      </div>
+                      <div class="achivment__info">
+                        <p class="achivment__title">Судьба свела в чате</p>
+                        <p class="achivment__desc">Заключи бракосочетание в группе</p>
+                      </div>
+                    </div>
+                    <div class="achiv__item achivment">
+                      <div class="achivment__icon">
+                        <img src="./img/achivments/08.svg" alt="">
+                      </div>
+                      <div class="achivment__info">
+                        <p class="achivment__title">Свободен как ветер</p>
+                        <p class="achivment__desc">Заключи бракосочетание в группе</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lk__content">
+              <div class="lk__row">
+                <div class="lk__block">
+                  <p class="lk__capture">Сообщения</p>
+                  <p class="lk__mess">
+                    <span>512 352</span>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9374 3C12.8481 3 10.4467 3 8.57741 3.2C6.68675 3.404 5.18941 3.82667 3.99475 4.78133C2.76808 5.76267 2.19475 7.03867 1.92408 8.648C1.66675 10.184 1.66675 12.1387 1.66675 14.576V14.82C1.66675 17.196 1.66675 18.84 1.93341 20.0653C2.07741 20.7253 2.30408 21.2987 2.66008 21.8293C3.01208 22.352 3.46008 22.792 3.99475 23.2187C4.83608 23.892 5.82808 24.2987 7.00008 24.552V28C7.00024 28.1752 7.04642 28.3473 7.13401 28.499C7.22159 28.6508 7.3475 28.7768 7.49914 28.8646C7.65077 28.9524 7.8228 28.9987 7.998 28.9991C8.1732 28.9995 8.34542 28.9538 8.49742 28.8667C9.27875 28.42 9.97075 27.9333 10.6041 27.4747L11.0094 27.18C11.4604 26.8424 11.9211 26.5178 12.3907 26.2067C13.5161 25.476 14.5907 25 16.0001 25H16.0627C19.1521 25 21.5534 25 23.4227 24.8C25.3134 24.596 26.8107 24.1733 28.0054 23.2187C28.5387 22.792 28.9881 22.352 29.3387 21.8293C29.6961 21.2987 29.9227 20.7253 30.0667 20.0653C30.3334 18.84 30.3334 17.196 30.3334 14.82V14.576C30.3334 12.1387 30.3334 10.184 30.0761 8.64933C29.8054 7.03867 29.2321 5.76267 28.0054 4.78133C26.8107 3.82533 25.3134 3.404 23.4227 3.20133C21.5534 3 19.1521 3 16.0627 3H15.9374Z"
+                        fill="#0039FF" />
+                    </svg>
+                  </p>
+                  <p class="lk__desc text">
+                    Столько сообщений вы отправили, находясь в группах с&nbsp;Dewin
+                  </p>
+                </div>
+                <div class="lk__block">
+                  <p class="lk__capture">Как настроить бота</p>
+                  <p class="lk__desc text">
+                    Узнайте больше о возможностях Dewin
+                  </p>
+                  <div class="lk__buttons">
+                    <a href="#" class="btn btn-reset btn--dark">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5 21C4.45 21 3.97933 20.8043 3.588 20.413C3.19667 20.0217 3.00067 19.5507 3 19V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V19C21 19.55 20.8043 20.021 20.413 20.413C20.0217 20.805 19.5507 21.0007 19 21H5ZM7 17H14V15H7V17ZM7 13H17V11H7V13ZM7 9H17V7H7V9Z" />
+                      </svg>
+                      /статья
+                    </a>
+                    <a href="#" class="btn btn-reset btn--dark">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M5 5C4.20435 5 3.44129 5.31607 2.87868 5.87868C2.31607 6.44129 2 7.20435 2 8V16C2 16.7956 2.31607 17.5587 2.87868 18.1213C3.44129 18.6839 4.20435 19 5 19H15C15.7956 19 16.5587 18.6839 17.1213 18.1213C17.6839 17.5587 18 16.7956 18 16V14.414L20.293 16.707C20.4329 16.8468 20.611 16.942 20.805 16.9806C20.9989 17.0192 21.2 16.9993 21.3827 16.9237C21.5654 16.848 21.7215 16.7199 21.8314 16.5555C21.9413 16.391 22 16.1978 22 16V8C22 7.80225 21.9413 7.60895 21.8314 7.44454C21.7215 7.28013 21.5654 7.15199 21.3827 7.07632C21.2 7.00065 20.9989 6.98085 20.805 7.01942C20.611 7.05798 20.4329 7.15319 20.293 7.293L18 9.586V8C18 7.20435 17.6839 6.44129 17.1213 5.87868C16.5587 5.31607 15.7956 5 15 5H5Z" />
+                      </svg>
+                      /видео
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lk__messages">
+                <div class="lk__block">
+                  <p class="lk__capture">
+                    Мои сообщества
+                  </p>
+                  <p class="lk__mess">
+                    Вы основатель в 12 группах
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 30C8.575 30 8.219 29.856 7.932 29.568C7.645 29.28 7.501 28.924 7.5 28.5C7.499 28.076 7.643 27.72 7.932 27.432C8.221 27.144 8.577 27 9 27H27C27.425 27 27.7815 27.144 28.0695 27.432C28.3575 27.72 28.501 28.076 28.5 28.5C28.499 28.924 28.355 29.2805 28.068 29.5695C27.781 29.8585 27.425 30.002 27 30H9ZM10.05 24.75C9.325 24.75 8.6815 24.5125 8.1195 24.0375C7.5575 23.5625 7.2135 22.9625 7.0875 22.2375L5.5875 12.7125C5.5375 12.7125 5.4815 12.719 5.4195 12.732C5.3575 12.745 5.301 12.751 5.25 12.75C4.625 12.75 4.094 12.5315 3.657 12.0945C3.22 11.6575 3.001 11.126 3 10.5C2.999 9.874 3.218 9.343 3.657 8.907C4.096 8.471 4.627 8.252 5.25 8.25C5.873 8.248 6.4045 8.467 6.8445 8.907C7.2845 9.347 7.503 9.878 7.5 10.5C7.5 10.675 7.481 10.8375 7.443 10.9875C7.405 11.1375 7.3615 11.275 7.3125 11.4L12 13.5L16.6875 7.0875C16.4125 6.8875 16.1875 6.625 16.0125 6.3C15.8375 5.975 15.75 5.625 15.75 5.25C15.75 4.625 15.969 4.0935 16.407 3.6555C16.845 3.2175 17.376 2.999 18 3C18.624 3.001 19.1555 3.22 19.5945 3.657C20.0335 4.094 20.252 4.625 20.25 5.25C20.25 5.625 20.1625 5.975 19.9875 6.3C19.8125 6.625 19.5875 6.8875 19.3125 7.0875L24 13.5L28.6875 11.4C28.6375 11.275 28.5935 11.1375 28.5555 10.9875C28.5175 10.8375 28.499 10.675 28.5 10.5C28.5 9.875 28.719 9.3435 29.157 8.9055C29.595 8.4675 30.126 8.249 30.75 8.25C31.374 8.251 31.9055 8.47 32.3445 8.907C32.7835 9.344 33.002 9.875 33 10.5C32.998 11.125 32.7795 11.6565 32.3445 12.0945C31.9095 12.5325 31.378 12.751 30.75 12.75C30.7 12.75 30.644 12.744 30.582 12.732C30.52 12.72 30.4635 12.7135 30.4125 12.7125L28.9125 22.2375C28.7875 22.9625 28.444 23.5625 27.882 24.0375C27.32 24.5125 26.676 24.75 25.95 24.75H10.05Z"
+                        fill="#FFC750" />
+                    </svg>
+                  </p>
+
+                  <div class="lk__items">
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Среднее название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/02.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Очень длинное название группы на 3 строки
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/03.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lk__more">
+                    <button class="btn-reset btn btn--stroke lk__showmore">
+                      /развернуть
+                    </button>
+                  </div>
+                </div>
+                <div class="lk__block">
+                  <p class="lk__capture">
+                    Все&nbsp;сообщества
+                  </p>
+                  <p class="lk__subtitle">
+                    Группы, в которых вы находитесь вместе с&nbsp;Dewin <span>21</span>
+                  </p>
+                  <div class="lk__items">
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lk__more">
+                    <button class="btn-reset btn btn--stroke lk__showmore">
+                      /развернуть
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
