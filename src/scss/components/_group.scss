@@ -59,6 +59,10 @@
       }
       span {
         font-weight: 700;
+
+        &.blue {
+          color: var(--siniy);
+        }
       }
 
       &:not(:last-child) {
