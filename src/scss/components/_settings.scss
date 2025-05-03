@@ -140,7 +140,11 @@
     align-items: center;
     gap: 4px;
   }
-
+  &__right {
+    @include mobile {
+      width: 100%;
+    }
+  }
   &__row {
     display: flex;
     align-items: center;
@@ -215,7 +219,12 @@
     padding: 10px;
     border-radius: 24px;
     background: var(--svetlo-siniy);
-
+    @include mobile {
+      padding: 0;
+      width: 100%;
+      background: none;
+      border-radius: 0;
+    }
     &-btn {
       display: flex;
       align-items: center;
@@ -292,6 +301,68 @@
       &.active {
         background-color: rgba(0, 57, 255, 0.1);
       }
+    }
+  }
+
+  // Стили для мобильных радио-кнопок (только для мобильных устройств)
+  &__radio-group {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    width: 100%;
+    input[type="radio"].visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      clip: rect(0 0 0 0);
+    }
+
+    &-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      width: 100%;
+      border-radius: 12px;
+      background-color: var(--belyy);
+      border: 1px solid var(--svetlo-siniy);
+      transition: all 0.3s ease;
+      font-size: 16px;
+      color: var(--chernyy);
+      justify-content: center;
+      img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    input[type="radio"]:checked + &-label {
+      background-color: var(--svetlo-siniy);
+      color: var(--belyy);
+      border-color: var(--siniy);
+    }
+
+    &:hover &-label {
+      border-color: var(--siniy);
+    }
+
+    input[type="radio"]:focus + &-label {
+      box-shadow: 0 0 0 2px rgba(0, 57, 255, 0.3);
     }
   }
 }

@@ -2983,6 +2983,11 @@ a {
   align-items: center;
   gap: 4px;
 }
+@media (max-width: 576px) {
+  .setting-item__right {
+    width: 100%;
+  }
+}
 .setting-item__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3066,6 +3071,14 @@ a {
   padding: 10px;
   border-radius: 24px;
   background: var(--svetlo-siniy);
+}
+@media (max-width: 576px) {
+  .setting-item__dropdown {
+    padding: 0;
+    width: 100%;
+    background: none;
+    border-radius: 0;
+  }
 }
 .setting-item__dropdown-btn {
   display: -webkit-box;
@@ -3156,6 +3169,76 @@ a {
 }
 .setting-item__dropdown-item.active {
   background-color: rgba(0, 57, 255, 0.1);
+}
+.setting-item__radio-group {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.setting-item__radio {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+.setting-item__radio input[type=radio].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.setting-item__radio-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--belyy);
+  border: 1px solid var(--svetlo-siniy);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: var(--chernyy);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.setting-item__radio-label img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+input[type=radio]:checked + .setting-item__radio-label {
+  background-color: var(--svetlo-siniy);
+  color: var(--belyy);
+  border-color: var(--siniy);
+}
+.setting-item__radio:hover .setting-item__radio-label {
+  border-color: var(--siniy);
+}
+input[type=radio]:focus + .setting-item__radio-label {
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 57, 255, 0.3);
+  box-shadow: 0 0 0 2px rgba(0, 57, 255, 0.3);
 }
 
 .hello {
