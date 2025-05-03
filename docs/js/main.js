@@ -4531,7 +4531,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
 /* harmony import */ var _components_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/mobile-dropdown.js */ "./src/js/components/mobile-dropdown.js");
 /* harmony import */ var _components_achievements_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/achievements.js */ "./src/js/components/achievements.js");
-/* harmony import */ var _components_tooltip_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/tooltip.js */ "./src/js/components/tooltip.js");
+/* harmony import */ var _components_command_dropdown_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/command-dropdown.js */ "./src/js/components/command-dropdown.js");
+/* harmony import */ var _components_tooltip_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/tooltip.js */ "./src/js/components/tooltip.js");
+
 
 
 
@@ -4543,7 +4545,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Инициализация тултипа
-new _components_tooltip_js__WEBPACK_IMPORTED_MODULE_8__["default"]();
+new _components_tooltip_js__WEBPACK_IMPORTED_MODULE_9__["default"]();
 console.log("components");
 
 /***/ }),
@@ -4655,6 +4657,143 @@ document.addEventListener("DOMContentLoaded", function () {
         itemsBlock.style.maxHeight = null;
       }
     });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/components/command-dropdown.js":
+/*!***********************************************!*\
+  !*** ./src/js/components/command-dropdown.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+document.addEventListener("DOMContentLoaded", () => {
+  const commandDropdowns = document.querySelectorAll(".command__drop");
+
+  // Функция для закрытия всех открытых дропдаунов
+  const closeAllDropdowns = function () {
+    let exceptDropdown = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    commandDropdowns.forEach(dropdown => {
+      if (dropdown !== exceptDropdown) {
+        const header = dropdown.querySelector(".command__header");
+        const body = dropdown.querySelector(".command__body");
+        if (header) {
+          header.classList.remove("active");
+        }
+
+        // Сбрасываем высоту и добавляем transition для плавности
+        if (body) {
+          body.style.maxHeight = "0";
+        }
+      }
+    });
+  };
+
+  // Функция для плавного открытия дропдауна
+  const openDropdown = dropdown => {
+    const header = dropdown.querySelector(".command__header");
+    const body = dropdown.querySelector(".command__body");
+    if (header && body) {
+      header.classList.add("active");
+
+      // Небольшая задержка перед анимацией для более плавного эффекта
+      setTimeout(() => {
+        const bodyContent = body.querySelector(".command__content");
+        if (bodyContent) {
+          body.style.maxHeight = bodyContent.scrollHeight + "px";
+        }
+      }, 10);
+    }
+  };
+
+  // Функция для плавного закрытия дропдауна
+  const closeDropdown = dropdown => {
+    const header = dropdown.querySelector(".command__header");
+    const body = dropdown.querySelector(".command__body");
+    if (header && body) {
+      header.classList.remove("active");
+      body.style.maxHeight = "0";
+    }
+  };
+
+  // Инициализация дропдаунов
+  commandDropdowns.forEach(dropdown => {
+    const header = dropdown.querySelector(".command__header");
+    const body = dropdown.querySelector(".command__body");
+
+    // Найдем текущее выбранное значение в заголовке
+    const currentValue = header?.querySelector("span:first-child")?.textContent.trim();
+
+    // Скрываем все тела дропдаунов по умолчанию
+    if (body) {
+      body.style.maxHeight = "0";
+      body.style.overflow = "hidden";
+      body.style.transition = "max-height 0.3s ease-out";
+
+      // Подсветим текущий активный пункт в дропдауне
+      const items = dropdown.querySelectorAll(".command__item");
+      items.forEach(item => {
+        if (item.textContent.trim() === currentValue) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+    }
+
+    // Обработчик клика по заголовку
+    if (header) {
+      header.addEventListener("click", e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isActive = header.classList.contains("active");
+
+        // Закрываем все остальные дропдауны
+        closeAllDropdowns(isActive ? null : dropdown);
+
+        // Переключаем состояние текущего дропдауна
+        if (isActive) {
+          // Закрываем текущий дропдаун
+          closeDropdown(dropdown);
+        } else {
+          // Открываем текущий дропдаун
+          openDropdown(dropdown);
+        }
+      });
+    }
+
+    // Обработчик клика по элементам дропдауна
+    const items = dropdown.querySelectorAll(".command__item");
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        // Получаем текст выбранного элемента
+        const selectedText = item.textContent.trim();
+
+        // Снимаем активное состояние со всех элементов
+        items.forEach(i => i.classList.remove("active"));
+
+        // Устанавливаем активное состояние для выбранного элемента
+        item.classList.add("active");
+
+        // Обновляем текст в заголовке
+        const headerText = header.querySelector("span:first-child");
+        if (headerText) {
+          headerText.textContent = selectedText;
+        }
+
+        // Закрываем дропдаун
+        closeDropdown(dropdown);
+      });
+    });
+  });
+
+  // Закрываем дропдауны при клике вне их области
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".command__drop")) {
+      closeAllDropdowns();
+    }
   });
 });
 

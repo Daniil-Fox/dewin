@@ -193,7 +193,7 @@
       transition: background-color 0.3s ease-in, color 0.3s ease-in;
 
       &:hover {
-        background-color: var(--siniy);
+        background-color: var(--svetlo-siniy);
         color: var(--belyy);
       }
 
@@ -209,7 +209,7 @@
       }
     }
     input:checked ~ span {
-      background-color: var(--siniy);
+      background-color: var(--svetlo-siniy);
       color: var(--belyy);
     }
   }
