@@ -1,6 +1,11 @@
 .command {
   padding: 40px 0 100px;
-
+  @include small-tablet {
+    padding: 40px 0;
+  }
+  @include mobile {
+    padding: 20px 0;
+  }
   &__title {
     margin-bottom: 40px;
     @include small-tablet {

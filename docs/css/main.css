@@ -5020,6 +5020,16 @@ input[type=radio]:focus + .setting-item__radio-label {
 .command {
   padding: 40px 0 100px;
 }
+@media (max-width: 850px) {
+  .command {
+    padding: 40px 0;
+  }
+}
+@media (max-width: 576px) {
+  .command {
+    padding: 20px 0;
+  }
+}
 .command__title {
   margin-bottom: 40px;
 }
