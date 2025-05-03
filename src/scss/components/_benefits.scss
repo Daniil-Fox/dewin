@@ -1,6 +1,10 @@
 .benefits {
   padding: 40px 0 48px;
 
+  @include small-tablet {
+    padding-bottom: 0;
+  }
+
   &__header {
     margin-bottom: 100px;
     @include tablet {
@@ -41,7 +45,9 @@
   &__items {
     display: flex;
     gap: 20px;
-    margin-bottom: 20px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
 
     @include tablet {
       display: grid;
@@ -142,6 +148,90 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+  }
+}
+
+.benefits--about {
+  .benefits__header {
+    margin-bottom: 64px;
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+  .robot {
+    margin-bottom: 120px;
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
+    &::before {
+      background-image: url("./../img/arrows2.svg");
+      height: 233px;
+      width: 900px;
+    }
+
+    &__img {
+      background-color: var(--siniy);
+    }
+  }
+  .benefits__item:nth-child(even) {
+    max-width: unset;
+  }
+  .benefits__item {
+    flex: 1;
+  }
+  .benefits__items {
+    @media (max-width: 1240px) {
+      .benefits__item:last-child {
+        grid-column: 2 span;
+      }
+    }
+    @include small-tablet {
+      .benefits__item:last-child {
+        grid-column: 1 span;
+      }
+    }
+  }
+  .ben {
+    padding: 40px 20px;
+    @include small-tablet {
+      padding: 20px;
+    }
+    @include mobile {
+      padding: 14px;
+    }
+    &__capture {
+      margin-bottom: 40px;
+      @include small-tablet {
+        margin-bottom: 20px;
+      }
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+    &:nth-child(3n + 1) {
+      .ben__capture {
+        &::before {
+          background-image: url("./../img/moln.webp");
+        }
+      }
+    }
+    &:nth-child(3n + 2) {
+      .ben__capture {
+        &::before {
+          background-image: url("./../img/earth.webp");
+        }
+      }
+    }
+    &:nth-child(3n + 3) {
+      .ben__capture {
+        &::before {
+          background-image: url("./../img/star.webp");
+        }
+      }
     }
   }
 }

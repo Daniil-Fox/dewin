@@ -6,6 +6,12 @@
     margin-bottom: -200px;
     padding-top: 150px;
   }
+
+  &--about {
+    @include tablet {
+      padding-top: 40px;
+    }
+  }
   &__container {
     display: flex;
     gap: 70px;

@@ -1,0 +1,146 @@
+.about-hero {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include mobile {
+    padding-bottom: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    width: 2300px;
+    height: 705px;
+    background-image: url("./../img/about-hero.webp");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: right;
+    transform: rotate(-16deg) translate(50%, 0%);
+
+    @include tablet {
+      width: 1400px;
+      height: 400px;
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 4;
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 12px;
+      width: 70px;
+      height: 70px;
+      background-image: url("./../img/book.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+      @include small-tablet {
+        width: 50px;
+        height: 50px;
+      }
+      @include mobile {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+  }
+
+  &__phone {
+    width: 100%;
+    max-width: 488px;
+    @include tablet {
+      max-width: 360px;
+    }
+    @include small-tablet {
+      max-width: 340px;
+    }
+    @include mobile {
+      max-width: 250px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    @include tablet {
+      gap: 20px;
+    }
+    @include small-tablet {
+      gap: 14px;
+    }
+  }
+
+  &__message {
+    padding: 12px 18px;
+    border-radius: 32px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 140%;
+    color: var(--belyy);
+    background: var(--siniy);
+    position: relative;
+    @include tablet {
+      font-size: 20px;
+    }
+    @include small-tablet {
+      font-size: 16px;
+      border-radius: 24px;
+      font-weight: 300;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: -6px;
+      bottom: -3px;
+      width: 44px;
+      aspect-ratio: 1 / 1;
+      mask-image: url("./../img/angle.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      background: var(--siniy);
+    }
+
+    &:nth-child(odd) {
+      &::before {
+        right: unset;
+        left: -6px;
+        transform: rotateY(180deg);
+      }
+    }
+
+    span {
+      position: relative;
+      z-index: 4;
+    }
+  }
+}

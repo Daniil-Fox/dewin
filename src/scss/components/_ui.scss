@@ -4,6 +4,10 @@
   font-size: 60px;
   text-align: center;
   color: var(--belyy);
+
+  &--dark {
+    color: var(--chernyy);
+  }
   @include tablet {
     font-size: 45px;
   }
@@ -63,7 +67,9 @@
   line-height: 140%;
   text-align: center;
   color: var(--seryy);
-
+  &--white {
+    color: var(--belyy);
+  }
   @include small-tablet {
     font-size: 18px;
   }
@@ -75,7 +81,9 @@
   font-size: 24px;
   line-height: 140%;
   color: var(--belyy);
-
+  &--dark {
+    color: var(--chernyy);
+  }
   @include tablet {
     font-size: 20px;
   }
