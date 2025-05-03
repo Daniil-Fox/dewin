@@ -2,11 +2,15 @@
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  max-height: 54px;
-  overflow: hidden;
+  max-height: unset;
+  overflow: visible;
+  transition: all 0.3s ease;
 
   &:not(:last-child) {
     margin-bottom: 8px;
+  }
+  &__info {
+    flex-grow: 1;
   }
   &__icon {
     display: flex;
@@ -26,6 +30,7 @@
       width: 35px;
       height: 35px;
       object-fit: contain;
+      filter: brightness(10);
       @include small-tablet {
         width: 25px;
         height: 25px;
@@ -34,13 +39,33 @@
   }
 
   &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    min-width: 0;
+    gap: 5px 0px;
     margin: 0;
-    white-space: nowrap;
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 20px;
     line-height: 140%;
     color: #000;
+    span:first-of-type {
+      flex-grow: 1;
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      min-width: 0;
+      max-width: 60%;
+    }
+    .percent {
+      white-space: nowrap;
+      flex-shrink: 0;
+      width: 30%;
+      text-align: right;
+    }
     @include small-tablet {
       font-size: 16px;
     }
@@ -55,11 +80,48 @@
     font-size: 16px;
     line-height: 140%;
     color: #000;
+    margin-bottom: 8px;
     @include small-tablet {
       font-size: 14px;
     }
     @include mobile {
       font-size: 10px;
+    }
+  }
+
+  &__hint {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+    color: #000;
+    margin-bottom: 4px;
+    span {
+      font-weight: 700;
+    }
+    &:last-of-type {
+      color: var(--siniy);
+      margin-bottom: 12px;
+    }
+  }
+
+  .progress {
+    margin-top: 8px;
+    &__bar {
+      height: 6px;
+      background: #becdff;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: var(--progress-width);
+        background-color: var(--siniy);
+      }
     }
   }
 }

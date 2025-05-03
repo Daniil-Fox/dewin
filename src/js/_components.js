@@ -5,6 +5,7 @@ import "./components/hello.js";
 import "./components/denied.js";
 import "./components/sliders.js";
 import "./components/mobile-dropdown.js";
+import "./components/achievements.js";
 import Tooltip from "./components/tooltip.js";
 
 // Инициализация тултипа

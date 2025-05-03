@@ -56,99 +56,283 @@
               <div class="lk-aside__achievements lk-achiv">
                 <div class="lk-achiv__header">
                   <p>Достижения</p>
-                  <a href="#">Все</a>
+                  <a href="#" class="btn-reset lk-achiv__showfull">Все</a>
                 </div>
-                <div class="lk-achiv__block achiv-block">
-                  <div class="achiv-block__header">
-                    <p class="achiv-block__title">Полученные</p>
-                    <div class="achiv-block__progress progress">
-                      <div class="progress__top">
-                        <div class="progress__left">10/20</div>
-                        <div class="progress__percent">50%</div>
+                <div class="lk-achiv__items">
+                  <div class="lk-achiv__block achiv-block">
+                    <div class="achiv-block__header">
+                      <p class="achiv-block__title">Полученные</p>
+                      <div class="achiv-block__progress progress">
+                        <div class="progress__top">
+                          <div class="progress__left">10/20</div>
+                          <div class="progress__percent">50%</div>
+                        </div>
+                        <div class="progress__bar" style="--progress-width: 50%">
+                          <div class="progress__line"></div>
+                        </div>
                       </div>
-                      <div class="progress__bar" style="--progress-width: 50%">
-                        <div class="progress__line"></div>
+                    </div>
+                    <div class="achiv-block__items">
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/01.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Мал, но удал</span></p>
+                          <p class="achivment__desc">Напиши 1000 сообщений в группах с&nbsp;ботом</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/02.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Легенда чатов</span></p>
+                          <p class="achivment__desc">Напиши 25000 сообщений в группах с ботом</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/03.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Мьют - как искусство</span></p>
+                          <p class="achivment__desc">Замьють пользователя в группе</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/04.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Изгнание грешника</span></p>
+                          <p class="achivment__desc">Забань пользователя в группе</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/05.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Первая встреча</span></p>
+                          <p class="achivment__desc">Пригласи бота в группу</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/08.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Мастер словесности</span></p>
+                          <p class="achivment__desc">Напиши 10000 сообщений в группах с ботом</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/06.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Активный собеседник</span></p>
+                          <p class="achivment__desc">Напиши 5000 сообщений в группах с ботом</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/07.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Новые возможности!</span></p>
+                          <p class="achivment__desc">Купи платный доступ бота (Подписку)</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/01.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Обратный билет</span></p>
+                          <p class="achivment__desc">Понизь уровень администрирования в группе другому пользователю</p>
+                        </div>
+                      </div>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/02.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Доверие = сила</span></p>
+                          <p class="achivment__desc">Повысь уровень администрирования в группе другому пользователю</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="achiv-block__items">
-                    <div class="achiv__item achivment">
-                      <div class="achivment__icon">
-                        <img src="./img/achivments/01.svg" alt="">
-                      </div>
-                      <div class="achivment__info">
-                        <p class="achivment__title">Мал, но удал</p>
-                        <p class="achivment__desc">Напиши 1000 сообщений в группах с&nbsp;ботом</p>
-                      </div>
+                  <div class="lk-achiv__block achiv-block">
+                    <div class="achiv-block__header">
+                      <p class="achiv-block__title">Ближайшие</p>
                     </div>
-                    <div class="achiv__item achivment">
-                      <div class="achivment__icon">
-                        <img src="./img/achivments/02.svg" alt="">
+                    <div class="achiv-block__items">
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/05.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Уважение - сила!</span> <span class="percent">25%</span></p>
+                          <p class="achivment__desc">Набери 25 репутации в группе</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 25%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="achivment__info">
-                        <p class="achivment__title">Легенда чатов</p>
-                        <p class="achivment__desc">Напиши 25000 сообщений в группах с ботом</p>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/06.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Не любимчик</span> <span class="percent">25%</span></p>
+                          <p class="achivment__desc">Набери -10 репутации в группе</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 25%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="achiv__item achivment">
-                      <div class="achivment__icon">
-                        <img src="./img/achivments/03.svg" alt="">
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/07.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Судьба свела в чате</span> <span class="percent">25%</span>
+                          </p>
+                          <p class="achivment__desc">Заключи бракосочетание в группе</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 25%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="achivment__info">
-                        <p class="achivment__title">Мьют - как искусство</p>
-                        <p class="achivment__desc">Замьють пользователя в группе</p>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/08.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Свободен как ветер</span> <span class="percent">25%</span>
+                          </p>
+                          <p class="achivment__desc">Расторгни брачный договор в группе</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 25%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="achiv__item achivment">
-                      <div class="achivment__icon">
-                        <img src="./img/achivments/04.svg" alt="">
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/05.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Долой рутину!</span> <span class="percent">25%</span></p>
+                          <p class="achivment__desc">Используй развлекательные команды</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 25%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="achivment__info">
-                        <p class="achivment__title">Изгнание грешника</p>
-                        <p class="achivment__desc">Забань пользователя в группе</p>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/07.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Мегафон в руках</span> <span class="percent">71%</span></p>
+                          <p class="achivment__desc">Отправь уведомление всем пользователям группы</p>
+                          <p class="achivment__hint"><span>Подсказка:</span> Используй команду /sms</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 71%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="lk-achiv__block achiv-block">
-                  <div class="achiv-block__header">
-                    <p class="achiv-block__title">Ближайшие</p>
-                  </div>
-                  <div class="achiv-block__items">
-                    <div class="achiv__item achivment">
-                      <div class="achivment__icon">
-                        <img src="./img/achivments/05.svg" alt="">
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/06.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Внимание, собрание!</span> <span class="percent">98%</span>
+                          </p>
+                          <p class="achivment__desc">Упомяни всех пользователей в группе</p>
+                          <p class="achivment__hint"><span>Подсказка:</span> Используй команду /all</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 98%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="achivment__info">
-                        <p class="achivment__title">Уважение - сила!</p>
-                        <p class="achivment__desc">Набери 25 репутации в группе</p>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/08.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Чат в безопасности!</span> <span class="percent">25%</span>
+                          </p>
+                          <p class="achivment__desc">Включить антиспам и запретить флуд/мат в группе</p>
+                          <p class="achivment__hint"><span>Подсказка:</span> Используй команду /ч или /чат</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 25%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="achiv__item achivment">
-                      <div class="achivment__icon">
-                        <img src="./img/achivments/06.svg" alt="">
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/07.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Общайся с помощью бота</span> <span
+                              class="percent">98%</span></p>
+                          <p class="achivment__desc">Выйти на беседу с помощью бота</p>
+                          <p class="achivment__hint"><span>Подсказка:</span> Используй команду /ч или /чат</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 98%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="achivment__info">
-                        <p class="achivment__title">Не любимчик</p>
-                        <p class="achivment__desc">Набери -10 репутации в группе</p>
-                      </div>
-                    </div>
-                    <div class="achiv__item achivment">
-                      <div class="achivment__icon">
-                        <img src="./img/achivments/07.svg" alt="">
-                      </div>
-                      <div class="achivment__info">
-                        <p class="achivment__title">Судьба свела в чате</p>
-                        <p class="achivment__desc">Заключи бракосочетание в группе</p>
-                      </div>
-                    </div>
-                    <div class="achiv__item achivment">
-                      <div class="achivment__icon">
-                        <img src="./img/achivments/08.svg" alt="">
-                      </div>
-                      <div class="achivment__info">
-                        <p class="achivment__title">Свободен как ветер</p>
-                        <p class="achivment__desc">Заключи бракосочетание в группе</p>
+                      <div class="achiv__item achivment">
+                        <div class="achivment__icon">
+                          <img src="./img/achivments/08.svg" alt="">
+                        </div>
+                        <div class="achivment__info">
+                          <p class="achivment__title"><span>Появился вопрос? Не проблема!</span> <span
+                              class="percent">98%</span>
+                          </p>
+                          <p class="achivment__desc">Отправь запрос (репорт)</p>
+                          <p class="achivment__hint"><span>Подсказка:</span> Отправь запрос в тех. поддержку. Она
+                            находится в ЛС
+                            бота!</p>
+                          <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+                          <div class="progress">
+                            <div class="progress__bar" style="--progress-width: 98%">
+                              <div class="progress__line"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -274,6 +458,34 @@
                         </p>
                         <div class="group__avatar">
                           <img src="./img/group/03.webp" alt="">
+                        </div>
+                      </div>
+
+                      <div class="group__content centered">
+                        <p>
+                          <span>111 111</span>
+                          <img src="./img/group/mess.svg" alt="">
+                        </p>
+
+                        <p>
+                          Должность: <span>Лидер</span>
+                        </p>
+
+                        <p>
+                          Репутация: <span class="blue">-9999999</span>
+                        </p>
+                      </div>
+                      <div class="group__bottom centered">
+                        <a href="#" class="btn btn--blue btn-reset group__btn">/настроить</a>
+                      </div>
+                    </div>
+                    <div class="lk__group group">
+                      <div class="group__header">
+                        <p class="group__title desc desc--dark">
+                          Название группы
+                        </p>
+                        <div class="group__avatar">
+                          <img src="./img/group/01.webp" alt="">
                         </div>
                       </div>
 
@@ -506,6 +718,287 @@
       </section>
     </main>
     @include('partials/footer.html')
+  </div>
+
+  <!-- Модальное окно достижений -->
+  <div class="lk-achiv-fullscreen" id="achievementsFullscreen">
+    <div class="lk-achiv-fullscreen__overlay"></div>
+    <div class="lk-achiv-fullscreen__content">
+      <div class="lk-achiv-fullscreen__header">
+        <p>Достижения</p>
+        <button class="btn-reset lk-achiv-fullscreen__close">Закрыть</button>
+      </div>
+      <div class="lk-achiv-fullscreen__block">
+        <div class="achiv-block__header">
+          <p class="achiv-block__title">Полученные</p>
+          <div class="achiv-block__progress progress">
+            <div class="progress__top">
+              <div class="progress__left">10/20</div>
+              <div class="progress__percent">50%</div>
+            </div>
+            <div class="progress__bar" style="--progress-width: 50%">
+              <div class="progress__line"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lk-achiv-fullscreen__items">
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/01.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Мал, но удал</span></p>
+              <p class="achivment__desc">Напиши 1000 сообщений в группах с&nbsp;ботом</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/02.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Легенда чатов</span></p>
+              <p class="achivment__desc">Напиши 25000 сообщений в группах с ботом</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/03.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Мьют - как искусство</span></p>
+              <p class="achivment__desc">Замьють пользователя в группе</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/04.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Изгнание грешника</span></p>
+              <p class="achivment__desc">Забань пользователя в группе</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/05.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Первая встреча</span></p>
+              <p class="achivment__desc">Пригласи бота в группу</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/08.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Мастер словесности</span></p>
+              <p class="achivment__desc">Напиши 10000 сообщений в группах с ботом</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/06.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Активный собеседник</span></p>
+              <p class="achivment__desc">Напиши 5000 сообщений в группах с ботом</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/07.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Новые возможности!</span></p>
+              <p class="achivment__desc">Купи платный доступ бота (Подписку)</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/01.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Обратный билет</span></p>
+              <p class="achivment__desc">Понизь уровень администрирования в группе другому пользователю</p>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/02.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Доверие = сила</span></p>
+              <p class="achivment__desc">Повысь уровень администрирования в группе другому пользователю</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lk-achiv-fullscreen__block">
+        <div class="achiv-block__header">
+          <p class="achiv-block__title">Ближайшие</p>
+        </div>
+        <div class="lk-achiv-fullscreen__items">
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/05.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Уважение - сила!</span> <span class="percent">25%</span></p>
+              <p class="achivment__desc">Набери 25 репутации в группе</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 25%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/06.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Не любимчик</span> <span class="percent">25%</span></p>
+              <p class="achivment__desc">Набери -10 репутации в группе</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 25%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/07.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Судьба свела в чате</span> <span class="percent">25%</span></p>
+              <p class="achivment__desc">Заключи бракосочетание в группе</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 25%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/08.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Свободен как ветер</span> <span class="percent">25%</span></p>
+              <p class="achivment__desc">Расторгни брачный договор в группе</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 25%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/05.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Долой рутину!</span> <span class="percent">25%</span></p>
+              <p class="achivment__desc">Используй развлекательные команды</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 25%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/07.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Мегафон в руках</span> <span class="percent">71%</span></p>
+              <p class="achivment__desc">Отправь уведомление всем пользователям группы</p>
+              <p class="achivment__hint"><span>Подсказка:</span> Используй команду /sms</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 71%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/06.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Внимание, собрание!</span> <span class="percent">98%</span></p>
+              <p class="achivment__desc">Упомяни всех пользователей в группе</p>
+              <p class="achivment__hint"><span>Подсказка:</span> Используй команду /all</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 98%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/08.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Чат в безопасности!</span> <span class="percent">25%</span></p>
+              <p class="achivment__desc">Включить антиспам и запретить флуд/мат в группе</p>
+              <p class="achivment__hint"><span>Подсказка:</span> Используй команду /ч или /чат</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 25%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/07.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Общайся с помощью бота</span> <span class="percent">98%</span></p>
+              <p class="achivment__desc">Выйти на беседу с помощью бота</p>
+              <p class="achivment__hint"><span>Подсказка:</span> Используй команду /ч или /чат</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 98%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="achiv__item achivment">
+            <div class="achivment__icon">
+              <img src="./img/achivments/08.svg" alt="">
+            </div>
+            <div class="achivment__info">
+              <p class="achivment__title"><span>Появился вопрос? Не проблема!</span> <span class="percent">98%</span>
+              </p>
+              <p class="achivment__desc">Отправь запрос (репорт)</p>
+              <p class="achivment__hint"><span>Подсказка:</span> Отправь запрос в тех. поддержку. Она находится в ЛС
+                бота!</p>
+              <p class="achivment__hint"><span>Награда:</span> 5 Dewin Coin</p>
+              <div class="progress">
+                <div class="progress__bar" style="--progress-width: 98%">
+                  <div class="progress__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 

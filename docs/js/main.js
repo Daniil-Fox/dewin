@@ -4530,7 +4530,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_denied_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/denied.js */ "./src/js/components/denied.js");
 /* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
 /* harmony import */ var _components_mobile_dropdown_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/mobile-dropdown.js */ "./src/js/components/mobile-dropdown.js");
-/* harmony import */ var _components_tooltip_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/tooltip.js */ "./src/js/components/tooltip.js");
+/* harmony import */ var _components_achievements_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/achievements.js */ "./src/js/components/achievements.js");
+/* harmony import */ var _components_tooltip_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/tooltip.js */ "./src/js/components/tooltip.js");
+
 
 
 
@@ -4541,8 +4543,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Инициализация тултипа
-new _components_tooltip_js__WEBPACK_IMPORTED_MODULE_7__["default"]();
+new _components_tooltip_js__WEBPACK_IMPORTED_MODULE_8__["default"]();
 console.log("components");
+
+/***/ }),
+
+/***/ "./src/js/components/achievements.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/achievements.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+document.addEventListener("DOMContentLoaded", function () {
+  const achievementsModal = document.getElementById("achievementsFullscreen");
+  const showButton = document.querySelector(".lk-achiv__showfull");
+  const closeButton = document.querySelector(".lk-achiv-fullscreen__close");
+  const overlay = document.querySelector(".lk-achiv-fullscreen__overlay");
+
+  // Проверка на наличие элементов на странице
+  if (!achievementsModal || !showButton) {
+    return;
+  }
+  console.log("Achievement components initialized");
+
+  // Открыть модальное окно
+  showButton.addEventListener("click", function () {
+    console.log("Show button clicked");
+    achievementsModal.classList.add("active"); // Блокировка прокрутки
+  });
+
+  // Закрыть модальное окно по клику на кнопку
+  if (closeButton) {
+    closeButton.addEventListener("click", function () {
+      console.log("Close button clicked");
+      achievementsModal.classList.remove("active");
+    });
+  }
+
+  // Закрыть модальное окно по клику на оверлей
+  if (overlay) {
+    overlay.addEventListener("click", function () {
+      console.log("Overlay clicked");
+      achievementsModal.classList.remove("active");
+    });
+  }
+
+  // Закрыть модальное окно по нажатию клавиши Escape
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && achievementsModal.classList.contains("active")) {
+      console.log("Escape pressed");
+      achievementsModal.classList.remove("active");
+    }
+  });
+});
 
 /***/ }),
 
@@ -4553,19 +4607,54 @@ console.log("components");
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-const collapsibleButtons = document.querySelectorAll(".lk__showmore");
-collapsibleButtons.forEach(button => {
-  button.addEventListener("click", function () {
-    const parentBlock = this.closest(".lk__block");
-    const itemsBlock = parentBlock.querySelector(".lk__items");
-    const isCollapsed = button.classList.toggle("active");
-    if (!isCollapsed) {
-      this.textContent = "/свернуть";
-      itemsBlock.style.maxHeight = null;
-    } else {
-      this.textContent = "/развернуть";
-      itemsBlock.style.maxHeight = itemsBlock.scrollHeight + "px"; // Возвращаем к исходному значению
+document.addEventListener("DOMContentLoaded", function () {
+  const collapsibleButtons = document.querySelectorAll(".lk__showmore");
+
+  // Инициализация начального состояния
+  collapsibleButtons.forEach(button => {
+    const parentBlock = button.closest(".lk__block") || button.closest(".lk-aside__achievements");
+    let itemsBlock;
+    if (parentBlock.classList.contains("lk__block")) {
+      itemsBlock = parentBlock.querySelector(".lk__items");
+    } else if (parentBlock.classList.contains("lk-aside__achievements")) {
+      itemsBlock = parentBlock.querySelector(".lk-achiv__items");
     }
+    if (itemsBlock) {
+      // По умолчанию все блоки свернуты
+      itemsBlock.style.maxHeight = null;
+      button.textContent = "/развернуть";
+    }
+  });
+
+  // Обработчик клика на кнопки
+  collapsibleButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      // Ищем ближайший блок-контейнер (может быть lk__block или lk-aside__achievements)
+      const parentBlock = this.closest(".lk__block") || this.closest(".lk-aside__achievements");
+
+      // Находим контейнер с элементами в зависимости от типа блока
+      let itemsBlock;
+      if (parentBlock.classList.contains("lk__block")) {
+        itemsBlock = parentBlock.querySelector(".lk__items");
+      } else if (parentBlock.classList.contains("lk-aside__achievements")) {
+        itemsBlock = parentBlock.querySelector(".lk-achiv__items");
+      }
+
+      // Проверяем, что удалось найти контейнер с элементами
+      if (!itemsBlock) return;
+
+      // Переключаем класс active на кнопке
+      const isCollapsed = button.classList.toggle("active");
+
+      // Обновляем текст кнопки и состояние контейнера
+      if (isCollapsed) {
+        this.textContent = "/свернуть";
+        itemsBlock.style.maxHeight = itemsBlock.scrollHeight + "px";
+      } else {
+        this.textContent = "/развернуть";
+        itemsBlock.style.maxHeight = null;
+      }
+    });
   });
 });
 
@@ -5234,6 +5323,195 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_components.js */ "./src/js/_components.js");
 
+
+// Обработчик для переключения блока достижений
+document.addEventListener("DOMContentLoaded", function () {
+  const achievementsShowBtn = document.querySelector(".lk-achiv__showfull");
+  const achievementsContainer = document.querySelector(".lk-achiv");
+  const achievementBlocks = document.querySelectorAll(".achiv-block__items");
+  const modalFullscreen = document.getElementById("achievementsFullscreen");
+  const modalCloseBtn = document.querySelector(".lk-achiv-fullscreen__close");
+  const modalOverlay = document.querySelector(".lk-achiv-fullscreen__overlay");
+
+  // Скрываем модальное окно при загрузке страницы
+  if (modalFullscreen) {
+    modalFullscreen.style.display = "none";
+  }
+
+  // Функция для определения типа устройства (мобильное или десктоп)
+  const isMobile = () => window.innerWidth <= 576; // 576px - стандартная точка breakpoint для мобильных
+
+  // Функция для показа компактного вида на мобильных устройствах
+  const showCompactView = () => {
+    // Меняем текст кнопки
+    if (achievementsShowBtn) {
+      achievementsShowBtn.textContent = "Все";
+    }
+
+    // Удаляем класс развернутого состояния
+    if (achievementsContainer) {
+      achievementsContainer.classList.remove("expanded");
+    }
+
+    // Ограничиваем высоту блоков достижений
+    achievementBlocks.forEach(block => {
+      // Устанавливаем ограничение высоты для всех блоков
+      block.style.maxHeight = "120px";
+      block.style.overflow = "hidden";
+
+      // Проверяем, принадлежит ли блок к категории "Полученные"
+      const isReceivedBlock = block.closest(".achiv-block").querySelector(".achiv-block__title").textContent.includes("Полученные");
+      if (isReceivedBlock) {
+        // Показываем только первые два достижения
+        const items = block.querySelectorAll(".achiv__item");
+        items.forEach((item, index) => {
+          if (index < 2) {
+            item.style.display = "flex";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+    });
+  };
+
+  // Функция для показа развернутого вида на мобильных устройствах
+  const showExpandedView = () => {
+    // Меняем текст кнопки
+    if (achievementsShowBtn) {
+      achievementsShowBtn.textContent = "Скрыть";
+    }
+
+    // Добавляем класс развернутого состояния
+    if (achievementsContainer) {
+      achievementsContainer.classList.add("expanded");
+    }
+
+    // Показываем все блоки достижений
+    achievementBlocks.forEach(block => {
+      // Показываем все элементы в блоке
+      const items = block.querySelectorAll(".achiv__item");
+      items.forEach(item => {
+        item.style.display = "flex";
+      });
+
+      // Убираем ограничения высоты
+      block.style.maxHeight = "none";
+      block.style.overflow = "visible";
+    });
+
+    // Корректируем скролл для мобильных устройств
+    setTimeout(function () {
+      window.scrollTo({
+        top: window.pageYOffset,
+        behavior: "smooth"
+      });
+    }, 50);
+  };
+
+  // Инициализация состояния при загрузке страницы
+  if (achievementsContainer && isMobile()) {
+    showCompactView();
+  }
+  if (achievementsShowBtn) {
+    achievementsShowBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (isMobile()) {
+        // МОБИЛЬНАЯ ВЕРСИЯ - раскрываем/сворачиваем блоки
+        const isExpanded = this.textContent === "Скрыть";
+        if (isExpanded) {
+          // Сворачиваем блоки
+          showCompactView();
+        } else {
+          // Разворачиваем блоки
+          showExpandedView();
+        }
+      } else {
+        // ДЕСКТОП ВЕРСИЯ - открываем модальное окно
+        if (modalFullscreen) {
+          modalFullscreen.style.display = "block";
+          modalFullscreen.classList.add("active");
+          document.body.style.overflow = "hidden"; // Блокируем скролл страницы
+        }
+      }
+    });
+  }
+
+  // Обработчики закрытия модального окна (для десктопа)
+  if (modalFullscreen) {
+    // Обработчик клика на кнопку закрытия
+    if (modalCloseBtn) {
+      modalCloseBtn.addEventListener("click", function () {
+        modalFullscreen.classList.remove("active");
+        document.body.style.overflow = ""; // Восстанавливаем скролл страницы
+        setTimeout(() => {
+          modalFullscreen.style.display = "none";
+        }, 300); // После завершения анимации
+      });
+    }
+
+    // Обработчик клика на оверлей
+    if (modalOverlay) {
+      modalOverlay.addEventListener("click", function () {
+        modalFullscreen.classList.remove("active");
+        document.body.style.overflow = ""; // Восстанавливаем скролл страницы
+        setTimeout(() => {
+          modalFullscreen.style.display = "none";
+        }, 300); // После завершения анимации
+      });
+    }
+
+    // Закрытие по Escape
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modalFullscreen.classList.contains("active")) {
+        modalFullscreen.classList.remove("active");
+        document.body.style.overflow = ""; // Восстанавливаем скролл страницы
+        setTimeout(() => {
+          modalFullscreen.style.display = "none";
+        }, 300); // После завершения анимации
+      }
+    });
+  }
+
+  // Обработчик изменения размера окна для правильного отображения
+  window.addEventListener("resize", function () {
+    // Если переключились с мобильного на десктоп и блоки были развернуты
+    if (!isMobile() && achievementsContainer && achievementsContainer.classList.contains("expanded")) {
+      // Сбрасываем мобильное состояние
+      achievementsContainer.classList.remove("expanded");
+      if (achievementsShowBtn) {
+        achievementsShowBtn.textContent = "Все";
+      }
+
+      // Восстанавливаем стандартное отображение для десктопа
+      achievementBlocks.forEach(block => {
+        block.style.maxHeight = "";
+        block.style.overflow = "";
+
+        // Показываем все элементы
+        const items = block.querySelectorAll(".achiv__item");
+        items.forEach(item => {
+          item.style.display = "";
+        });
+      });
+    }
+
+    // Если переключились с десктопа на мобильный
+    if (isMobile() && achievementsContainer) {
+      // Если модальное окно было открыто, закрываем его
+      if (modalFullscreen && modalFullscreen.classList.contains("active")) {
+        modalFullscreen.classList.remove("active");
+        document.body.style.overflow = "";
+        modalFullscreen.style.display = "none";
+      }
+
+      // Инициализируем компактный вид, если нет класса expanded
+      if (!achievementsContainer.classList.contains("expanded")) {
+        showCompactView();
+      }
+    }
+  });
+});
 })();
 
 /******/ })()
